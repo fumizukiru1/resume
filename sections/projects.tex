@@ -1,70 +1,60 @@
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
 \cvsection{项目经历}
 
 
-%-------------------------------------------------------------------------------
-%	CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
 
 %---------------------------------------------------------
   \cventry
-    {AI 工程化与边缘计算部署} % Project role
-    {本地 AI 数字人直播系统（企业级生产项目）} % Project
+    {个人项目} % Role
+    {AI 数字人直播系统搭建与运维} % Project
     {} % Location
     {2025.06 - 2026.07} % Date(s)
     {
       \begin{cvitems}
-        \item {借助 Codex/Copilot 等 AI 辅助工具快速构建 SillyTavern + Home Assistant 集成框架}
-        \item {对开源 LLM 模型进行量化和微调以满足电商直播需求，使用 Ollama 实现边缘推理}
-        \item {实现交互延迟低于 17 秒的实时交互系统，在境外直播场景中稳定运行超 6 小时}
+        \item {在双机环境部署 LLM 推理（Ollama）和语音合成服务，使用 Docker 容器化，docker-compose 编排}
+        \item {编写 Shell 脚本实现服务健康检查、日志轮转和异常重启}
+        \item {交互流程：用户弹幕 → 直播延迟约 10 秒 → 数字人回复，端到端约 17 秒内}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {队长 \& 唯一开发者} % Role
-    {计算机棋类博弈 AI 引擎（两届国赛获奖）} % Project
-    {} % Location
-    {2022.03 - 2024.06} % Date(s)
-    {
-      \begin{cvitems}
-        \item {在算力不足情况下实现高搜索深度的国际跳棋 AI，应对博弈树爆炸问题}
-        \item {使用 Alpha-Beta 剪枝架构，引入历史启发与哈希表减少冗余搜索}
-        \item {2022 版：利用 AVX 指令集对位运算与状态评估进行向量化重构，搜索速度提升 17.6\%}
-        \item {2024 版：使用 Python3 重写并将核心搜索迁移至 GPU，CUDA 并行化释放 CPU 瓶颈，搜索深度增加 6 层}
-        \item {国家级二等奖（2 次）、辽宁省级二等/三等奖各 1 次}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {毕业设计 \& Vibe Coding 实践} % Role
-    {基于 RISC-V 的智能家居 AI 助手} % Project
-    {} % Location
-    {2025.09 - 2026.06} % Date(s)
-    {
-      \begin{cvitems}
-        \item {整合 SillyTavern、GPT-SoVITS 与 Home Assistant，在 RISC-V/Armbian 平台上实现语音交互、多轮对话与智能家居设备控制}
-        \item {七天完成系统从 0 到 1 搭建，顺利通过答辩}
-        \item {引入 Vibe Coding 与 OpenCLA 工作流，将单一智能家居中控进化为通用智能助手}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Linux 内核与开源生态贡献} % Role
-    {RISC-V/ARM 平台 OpenWrt 适配与主线化} % Project
+    {个人项目} % Role
+    {多平台 Linux 系统构建与内核贡献} % Project
     {} % Location
     {2024.09 - 2025.05} % Date(s)
     {
       \begin{cvitems}
-        \item {负责 TH1520、SG2000、JH7110、MT798x 等平台的 OpenWrt/Armbian 系统移植与内核调试}
-        \item {推动核心代码合入上游主线，OpenWrt 主线合并数个提交}
-        \item {为 QModem 新增高通 SIM8202G-M2 5G 模块驱动支持；维护 ImmortalWrt FAQ 文档}
-        \item {参与 Siflower 平台内核升级工作；为 Deepin 操作系统适配 JH7110 GPU 驱动（OpenGL ES）}
+        \item {为 TH1520、SG2000、JH7110、MT798x 等多款 SoC 构建 OpenWrt/Armbian 系统镜像}
+        \item {3 个内核补丁合入 OpenWrt 主线（Siflower、MediaTek ARM、Airoha 平台）}
+        \item {使用 GDB / QEMU 调试内核启动异常和内存管理问题}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {毕业设计} % Role
+    {RISC-V 平台智能家居 AI 中控系统} % Project
+    {} % Location
+    {2025.09 - 2026.06} % Date(s)
+    {
+      \begin{cvitems}
+        \item {在 RISC-V 设备上安装 Armbian 系统，部署 SillyTavern、GPT-SoVITS、Home Assistant}
+        \item {使用 Docker 管理上述服务，配置各组件间的网络通信}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {个人项目} % Role
+    {Docker 搭建 LNMP 网站} % Project
+    {} % Location
+    {2022} % Date(s)
+    {
+      \begin{cvitems}
+        \item {使用 Docker 部署 Nginx + MySQL + PHP 环境，编写 docker-compose.yml 管理多容器}
       \end{cvitems}
     }
 
