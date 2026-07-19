@@ -1,0 +1,23 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+
+# Font logs
+missfont.log
+
+# Generated PDFs (keep in repo for easy access)
+# *.pdf
+
+# Preview images
+preview-*.png
+
+# OS files
+.DS_Store
+Thumbs.db
