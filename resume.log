@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Debian) (preloaded format=xelatex 2026.7.19)  19 JUL 2026 16:56
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Debian) (preloaded format=xelatex 2026.7.19)  19 JUL 2026 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1055,29 +1055,30 @@ Package: bookmark 2026-05-21 v1.32 PDF bookmarks (HO)
 File: bkm-xetex.def 2026-05-21 v1.32 bookmark driver for xetex (HO)
 \BKM@id=\count359
 )))
-No file resume.aux.
+(./resume.aux)
 \openout1 = `resume.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1113,46 +1114,46 @@ LaTeX Font Info:    ... okay on input line 48.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 48.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 39.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 48.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 39.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 48.
+(Font)              `operators' in the math version `normal' on input line 39.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 48.
+ line 39.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 48.
+(Font)              `operators' in the math version `bold' on input line 39.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 48.
+t line 39.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 48.
+(Font)              `symbols' in the math version `normal' on input line 39.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 48.
+t line 39.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 48.
+(Font)              `symbols' in the math version `bold' on input line 39.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 48.
+t line 39.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 4
-8.
+(Font)              `largesymbols' in the math version `normal' on input line 3
+9.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 48.
+t line 39.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 48.
+(Font)              `largesymbols' in the math version `bold' on input line 39.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 48.
+t line 39.
 ! Font \XeTeXLink@font=pzdr at 0.00002pt not loadable: Metric (TFM) file or ins
 talled font not found.
 <to be read again> 
                    \relax 
-l.48 \begin{document}
+l.39 \begin{document}
                      
 I wasn't able to read the size data for this font,
 so I will ignore the font specification.
@@ -1160,53 +1161,54 @@ so I will ignore the font specification.
 You might try inserting a different font spec;
 e.g., type `I\font<same font id>=<substitute font name>'.
 
-Package hyperref Info: Link coloring OFF on input line 48.
+Package hyperref Info: Link coloring OFF on input line 39.
 \headertextwidth=\skip89
 \headerphotowidth=\skip90
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 51.
+(Font)              scaled to size 10.95116pt on input line 41.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 51.
+(Font)              scaled to size 7.6658pt on input line 41.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 51.
+(Font)              scaled to size 5.47559pt on input line 41.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 51.
+(Font)              scaled to size 10.94882pt on input line 41.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 51.
+(Font)              scaled to size 7.66417pt on input line 41.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 51.
+(Font)              scaled to size 5.47441pt on input line 41.
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sc' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/n' instead on input line 51.
+(Font)              using `TU/NotoSansCJKSC(0)/m/n' instead on input line 41.
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(1)/m/it' undefined
-(Font)              using `TU/NotoSansCJKSC(1)/m/n' instead on input line 51.
+(Font)              using `TU/NotoSansCJKSC(1)/m/n' instead on input line 41.
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/it' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/n' instead on input line 51.
+(Font)              using `TU/NotoSansCJKSC(0)/m/n' instead on input line 41.
 
 
-Overfull \hbox (1.63521pt too wide) in paragraph at lines 51--52
+Overfull \hbox (1.63521pt too wide) in paragraph at lines 41--42
 [][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 (./sections/summary.tex
-Overfull \hbox (251.90723pt too wide) in paragraph at lines 13--14
-[]\TU/NotoSansCJKSC(0)/m/n/9 兼具 Linux 内核底层开发与 AI 工程化落地能力的开源软件工程师。具备 RISC-V/ARM 
-多平台 OpenWrt/Armbian 系统移植与主线化经验，深度参与开源社区协作并多次贡献上游合并。在计算机博弈
+Overfull \hbox (17.3926pt too wide) in paragraph at lines 13--14
+[]\TU/NotoSansCJKSC(0)/m/n/9 兼具底层系统深度与自动化工程实践的 DevOps 工程师。精通 Linux 系统管理与 Shell 
+脚本，熟悉 Python / Go 开发；拥有多平台（RISC-
  []
 
 
-Overfull \hbox (317.2135pt too wide) in paragraph at lines 13--14
-\TU/NotoSansCJKSC(0)/m/n/9 AI 领域两届国赛获奖，擅长利用 AVX/CUDA 进行极致性能优化。热爱探索 AI 编程（Vibe C
-oding）前沿开发模式，并在企业级数字人直播与边缘智能项目中成功实践。持续关注开源生态，坚信技术应当服务于人。 
+Overfull \hbox (638.14388pt too wide) in paragraph at lines 13--14
+\TU/NotoSansCJKSC(0)/m/n/9 V / ARM / x86）系统构建与部署的全流程自动化经验。在实践中成功将 AI 服务（LLM 推理）
+通过 Docker 容器化从开发环境高效交付至生产，大幅缩短发布周期。善于以工程化思维设计自动化流水线，热爱从零到一的系统构建过程。具备从裸机到服务编排的完整
+能力栈，追求基础设施即代码的
  []
 
 ) (./sections/experience.tex
@@ -1220,26 +1222,26 @@ LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--25
-[]\TU/NotoSansCJKSC(0)/m/it/9 主导搭建本地 AI 数字人直播系统，利用 LLM 量化（Ollama）、GPT-SoVITS 语音
-合成与 Vibe Coding
+[]\TU/NotoSansCJKSC(0)/m/it/9 设计并实施 AI 数字人直播系统的全流程 CI/CD 交付管线：从 LLM 模型量化构建、Dock
+er
  []
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 40.
+(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 39.
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 40.
+(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 39.
 
 ) (./sections/projects.tex
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 24.
+(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 25.
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 24.
+(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 25.
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
@@ -1259,11 +1261,11 @@ LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 69.
+(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 68.
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 69.
+(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 68.
 
 ) (./sections/education.tex
 
@@ -1274,9 +1276,9 @@ LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
 (Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 18.
 
-[1
+) (./sections/skills.tex [1
 
-]) (./sections/skills.tex) (./sections/honors.tex
+]) (./sections/honors.tex
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
 (Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 17.
@@ -1291,10 +1293,6 @@ LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 38.
-
-
-LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
 (Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 45.
 
 
@@ -1303,15 +1301,7 @@ LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
 
 
 LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 66.
-
-
-LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 73.
-
-
-LaTeX Font Warning: Font shape `TU/NotoSansCJKSC(0)/m/sl' undefined
-(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 80.
+(Font)              using `TU/NotoSansCJKSC(0)/m/it' instead on input line 59.
 
 ) [2] (./resume.aux)
  ***********
@@ -1324,12 +1314,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 33186 strings out of 469852
- 666985 string characters out of 5469872
- 1263174 words of memory out of 5000000
- 61624 multiletter control sequences out of 15000+600000
+ 33189 strings out of 469852
+ 667030 string characters out of 5469872
+ 1264155 words of memory out of 5000000
+ 61625 multiletter control sequences out of 15000+600000
  629773 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,11n,135p,564b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,12n,135p,564b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on resume.pdf (2 pages).

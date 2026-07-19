@@ -11,60 +11,59 @@
 
 %---------------------------------------------------------
   \cventry
-    {AI 工程化与边缘计算部署} % Project role
-    {本地 AI 数字人直播系统（企业级生产项目）} % Project
+    {CI/CD \& 服务交付} % Role
+    {AI 推理服务自动化部署管线（企业级生产项目）} % Project
     {} % Location
     {2025.06 - 2026.07} % Date(s)
     {
       \begin{cvitems}
-        \item {借助 Codex/Copilot 等 AI 辅助工具快速构建 SillyTavern + Home Assistant 集成框架}
-        \item {对开源 LLM 模型进行量化和微调以满足电商直播需求，使用 Ollama 实现边缘推理}
-        \item {实现交互延迟低于 17 秒的实时交互系统，在境外直播场景中稳定运行超 6 小时}
+        \item {构建端到端交付流水线：LLM 模型量化 → Docker 镜像构建（Dockerfile 优化）→ 边缘节点部署 → 健康检查 → 灰度切换}
+        \item {编写自动化运维脚本（Shell / Python），实现服务自愈、日志采集与性能指标监控}
+        \item {优化容器镜像体积与推理延迟，实现多路并发下的稳定低延迟（<17s）}
+        \item {在算力受限的边缘环境中设计高可用部署策略，生产零故障运行超 6 小时}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {队长 \& 唯一开发者} % Role
-    {计算机棋类博弈 AI 引擎（两届国赛获奖）} % Project
-    {} % Location
-    {2022.03 - 2024.06} % Date(s)
-    {
-      \begin{cvitems}
-        \item {在算力不足情况下实现高搜索深度的国际跳棋 AI，应对博弈树爆炸问题}
-        \item {使用 Alpha-Beta 剪枝架构，引入历史启发与哈希表减少冗余搜索}
-        \item {2022 版：利用 AVX 指令集对位运算与状态评估进行向量化重构，搜索速度提升 17.6\%}
-        \item {2024 版：使用 Python3 重写并将核心搜索迁移至 GPU，CUDA 并行化释放 CPU 瓶颈，搜索深度增加 6 层}
-        \item {国家级二等奖（2 次）、辽宁省级二等/三等奖各 1 次}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {毕业设计 \& Vibe Coding 实践} % Role
-    {基于 RISC-V 的智能家居 AI 助手} % Project
-    {} % Location
-    {2025.09 - 2026.06} % Date(s)
-    {
-      \begin{cvitems}
-        \item {整合 SillyTavern、GPT-SoVITS 与 Home Assistant，在 RISC-V/Armbian 平台上实现语音交互、多轮对话与智能家居设备控制}
-        \item {七天完成系统从 0 到 1 搭建，顺利通过答辩}
-        \item {引入 Vibe Coding 与 OpenCLA 工作流，将单一智能家居中控进化为通用智能助手}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Linux 内核与开源生态贡献} % Role
-    {RISC-V/ARM 平台 OpenWrt 适配与主线化} % Project
+    {Build \& Release Engineering} % Role
+    {多架构 Linux 发行版构建自动化} % Project
     {} % Location
     {2024.09 - 2025.05} % Date(s)
     {
       \begin{cvitems}
-        \item {负责 TH1520、SG2000、JH7110、MT798x 等平台的 OpenWrt/Armbian 系统移植与内核调试}
-        \item {推动核心代码合入上游主线，OpenWrt 主线合并数个提交}
-        \item {为 QModem 新增高通 SIM8202G-M2 5G 模块驱动支持；维护 ImmortalWrt FAQ 文档}
-        \item {参与 Siflower 平台内核升级工作；为 Deepin 操作系统适配 JH7110 GPU 驱动（OpenGL ES）}
+        \item {搭建跨架构（RISC-V / ARM / MIPS）交叉编译流水线，使用 Make / Ninja / CMake 管理复杂构建依赖}
+        \item {标准化 TH1520、SG2000、JH7110、MT798x 等 SoC 平台的内核配置、Device Tree 编译和镜像打包流程}
+        \item {与上游 Maintainer 进行英文 Code Review，推动内核补丁合入 OpenWrt 主线 — 完整的开源 Release 流程}
+        \item {使用 QEMU + GDB 搭建自动化内核回归测试环境，实现 CI 驱动的内核错误检测}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {全栈 DevOps 实践} % Role
+    {智能家居 AI 中控系统 Dev-to-Prod 交付（毕业设计）} % Project
+    {} % Location
+    {2025.09 - 2026.06} % Date(s)
+    {
+      \begin{cvitems}
+        \item {在 RISC-V 边缘设备上完整交付一套 AI 智能助手系统，涵盖裸机安装 → 服务编排 → 网络配置 → 安全加固}
+        \item {\mbox{集成 SillyTavern + GPT-SoVITS + Home Assistant} 三个异构服务，通过 Docker 进行服务编排与生命周期管理}
+        \item {\mbox{引入 AI 辅助开发工作流（Vibe Coding）} 加速系统迭代，验证了 AI 在 DevOps 工具链中的增效潜力}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {性能工程} % Role
+    {计算机博弈 AI 引擎的性能优化} % Project
+    {} % Location
+    {2022.03 - 2024.06} % Date(s)
+    {
+      \begin{cvitems}
+        \item {作为队长与唯一开发者，实现高性能国际跳棋 AI，连续两届国赛获奖}
+        \item {使用 AVX 指令集向量化优化，搜索速度提升 17.6\%；将核心搜索迁移至 GPU（CUDA），搜索深度增加 6 层}
+        \item {体现了性能调优、资源利用率优化和算法工程化的综合能力}
       \end{cvitems}
     }
 
