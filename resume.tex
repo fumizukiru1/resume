@@ -2,12 +2,9 @@
 %!TEX encoding = UTF-8 Unicode
 % Awesome CV LaTeX Template for CV/Resume
 %
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
+% Original template: https://github.com/posquit0/Awesome-CV
 %
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
+% Template license: CC BY-SA 4.0
 
 
 %-------------------------------------------------------------------------------
@@ -15,16 +12,11 @@
 %-------------------------------------------------------------------------------
 \documentclass[11pt, a4paper]{awesome-cv}
 
-% Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-% Color for highlights
-\colorlet{awesome}{awesome-red}
-
-% Set false if you don't want to highlight section with awesome color
+% Color — blue for ops/infrastructure feel
+\colorlet{awesome}{awesome-skyblue}
 \setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
@@ -32,33 +24,28 @@
 %	PERSONAL INFORMATION
 %-------------------------------------------------------------------------------
 \chinesename{朱宇杰}
-\position{开源软件工程师{\enskip\cdotp\enskip}Linux 内核开发}
+\position{云原生运维开发工程师{\enskip\cdotp\enskip}Linux 系统专家}
 \address{辽宁省大连市}
 
 \mobile{(+86) 155-2385-6350}
 \email{init233@outlook.com}
 \github{libiunc}
-% \github{initzhu}   % second GitHub username
-%\linkedin{linkedin-id}
+% \github{initzhu}
 
-\quote{仰望星空，脚踏实地 —— 开源贡献者、底层技术探索者、AI 工程化实践者}
+\quote{从内核到集群 — 深入操作系统底层的云原生基础设施实践者}
 
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal information
 \makecvheader[C]
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
 \makecvfooter
   {\today}
-  {朱宇杰~~~·~~~Résumé}
+  {朱宇杰~~~·~~~Kubernetes / DevOps 方向}
   {\thepage}
 
 
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
 %-------------------------------------------------------------------------------
 \input{sections/summary.tex}
 \input{sections/experience.tex}
