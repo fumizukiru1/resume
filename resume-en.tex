@@ -1,0 +1,49 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Blue for desktop support / infrastructure operations
+\colorlet{awesome}{awesome-skyblue}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+% PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Yu Jie}{Zhu}
+\position{Desktop Support / IT Support Engineer}
+\address{Dalian, Liaoning, China}
+
+\mobile{(+86) 155-2385-6350}
+\email{init233@outlook.com}
+\github{libiunc}
+
+\quote{Endpoint support, network troubleshooting, access management, and service operations}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader[C]
+
+\makecvfooter
+  {\today}
+  {Yu Jie Zhu~~~·~~~Desktop Support / IT Support}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+\input{sections/summary-en.tex}
+\input{sections/experience-en.tex}
+\input{sections/projects-en.tex}
+\newpage
+\input{sections/education-en.tex}
+\input{sections/skills-en.tex}
+\input{sections/honors-en.tex}
+
+%-------------------------------------------------------------------------------
+\end{document}
