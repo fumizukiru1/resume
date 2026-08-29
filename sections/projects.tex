@@ -17,8 +17,8 @@
     {2025.06 - 2026.07} % Date(s)
     {
       \begin{cvitems}
-        \item {借助 Codex/Copilot 等 AI 辅助工具快速构建 SillyTavern + Home Assistant 集成框架}
-        \item {对开源 LLM 模型进行量化和微调以满足电商直播需求，使用 Ollama 实现边缘推理}
+        \item {独立完成后端 LLM、语音合成与直播交互链路：LLM 推理（Ollama）、TTS、弹幕接入均使用 Docker 容器化}
+        \item {Ollama 模型为 Qwen3.5 27B（4.151 bpw 量化），挂载商品/话术资料库，并通过 LoRA 适配电商直播促单话术}
         \item {实现交互延迟低于 17 秒的实时交互系统，在境外直播场景中稳定运行超 6 小时}
       \end{cvitems}
     }
@@ -48,6 +48,7 @@
     {
       \begin{cvitems}
         \item {整合 SillyTavern、GPT-SoVITS 与 Home Assistant，在 RISC-V/Armbian 平台上实现语音交互、多轮对话与智能家居设备控制}
+        \item {在 RTX 3080 Laptop（16GB 显存）上用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B，作为 SillyTavern 的对话后端}
         \item {七天完成系统从 0 到 1 搭建，顺利通过答辩}
         \item {引入 Vibe Coding 与 OpenCLA 工作流，将单一智能家居中控进化为通用智能助手}
       \end{cvitems}
