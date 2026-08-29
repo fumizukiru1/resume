@@ -14,6 +14,7 @@
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {从零搭建 AI 数字人直播系统，部署在两台 x86 主机上（RTX 4060 + 9950X，RTX 5080 + 14700K），面向境外直播平台使用}
+        \item {独立负责 LLM 链路：使用 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品/话术资料库，并通过 LoRA 适配直播促单话术}
         \item {使用 Docker 封装 LLM 推理和 TTS 服务，通过 docker-compose 管理多服务启动顺序和重启策略}
         \item {在 OpenWrt 路由器上划分 VLAN，隔离办公室与工厂网络，配置出境代理}
         \item {维护公司桌面系统和网络设备，处理日常故障}

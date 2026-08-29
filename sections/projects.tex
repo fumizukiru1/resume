@@ -7,13 +7,14 @@
 
 %---------------------------------------------------------
   \cventry
-    {个人项目} % Role
+    {独立负责（公司项目）} % Role
     {AI 数字人直播系统搭建与运维} % Project
     {} % Location
     {2025.06 - 2026.07} % Date(s)
     {
       \begin{cvitems}
-        \item {在双机环境部署 LLM 推理（Ollama）和语音合成服务，使用 Docker 容器化，docker-compose 编排}
+        \item {独立完成后端 LLM、语音合成与直播交互链路：LLM 推理（Ollama）、TTS、弹幕接入均使用 Docker 容器化，docker-compose 编排}
+        \item {Ollama 模型为 Qwen3.5 27B（4.151 bpw 量化），挂载商品/话术资料库，并通过 LoRA 适配直播促单话术}
         \item {编写 Shell 脚本实现服务健康检查、日志轮转和异常重启}
         \item {交互流程：用户弹幕 → 直播延迟约 10 秒 → 数字人回复，端到端约 17 秒内}
       \end{cvitems}
@@ -42,6 +43,7 @@
     {
       \begin{cvitems}
         \item {在 RISC-V 设备上安装 Armbian 系统，部署 SillyTavern、GPT-SoVITS、Home Assistant}
+        \item {在 RTX 3080 Laptop（16GB 显存）上用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B，作为 SillyTavern 的对话后端}
         \item {使用 Docker 管理上述服务，配置各组件间的网络通信}
       \end{cvitems}
     }
