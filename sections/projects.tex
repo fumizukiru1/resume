@@ -1,71 +1,80 @@
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
+% SECTION TITLE
 %-------------------------------------------------------------------------------
 \cvsection{项目经历}
 
-
 %-------------------------------------------------------------------------------
-%	CONTENT
+% CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
 
 %---------------------------------------------------------
   \cventry
-    {AI 工程化与边缘计算部署} % Project role
-    {本地 AI 数字人直播系统（企业级生产项目）} % Project
-    {} % Location
-    {2025.06 - 2026.07} % Date(s)
+    {Linux 系统构建与开源贡献}
+    {多架构 OpenWrt / Armbian 适配}
+    {}
+    {2024.09 - 至今}
     {
       \begin{cvitems}
-        \item {独立完成后端 LLM、语音合成与直播交互链路：LLM 推理（Ollama）、TTS、弹幕接入均使用 Docker 容器化}
-        \item {Ollama 模型为 Qwen3.5 27B（4.151 bpw 量化），挂载商品/话术资料库，并通过 LoRA 适配电商直播促单话术}
-        \item {实现交互延迟低于 17 秒的实时交互系统，在境外直播场景中稳定运行超 6 小时}
+        \item {维护 TH1520、SG2000、JH7110、MT798x、Siflower 等 SoC 的系统配置、交叉编译、内核配置、Device Tree 编译与镜像打包}
+        \item {跟踪上游内核驱动变更，使用 QEMU / GDB、串口输出和系统日志复现、定位启动与驱动问题}
+        \item {参与 Siflower sf21 / sf19a2890 内核从 6.12 向 6.18 升级，分析 MIPS / RISC-V、DPNS 以太网与 DMA/NPI 相关驱动修复}
+        \item {向 OpenWrt 主线合入 3 个内核补丁；为 QModem 增加高通 SIM8202G-M2 5G 模块支持，维护 ImmortalWrt user-FAQ}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {队长 \& 唯一开发者} % Role
-    {计算机棋类博弈 AI 引擎（两届国赛获奖）} % Project
-    {} % Location
-    {2022.03 - 2024.06} % Date(s)
+    {本地 LLM 与边缘服务部署}
+    {AI 数字人直播系统}
+    {}
+    {2025.06 - 2026.07}
     {
       \begin{cvitems}
-        \item {在算力不足情况下实现高搜索深度的国际跳棋 AI，应对博弈树爆炸问题}
-        \item {使用 Alpha-Beta 剪枝架构，引入历史启发与哈希表减少冗余搜索}
-        \item {2022 版：利用 AVX 指令集对位运算与状态评估进行向量化重构，搜索速度提升 17.6\%}
-        \item {2024 版：使用 Python3 重写并将核心搜索迁移至 GPU，CUDA 并行化释放 CPU 瓶颈，搜索深度增加 6 层}
-        \item {国家级二等奖（2 次）、辽宁省级二等/三等奖各 1 次}
+        \item {独立完成 LLM 推理、GPT-SoVITS、直播弹幕接入及数字人交互链路部署}
+        \item {使用 Docker 和 docker-compose 管理服务依赖、启动顺序与重启策略}
+        \item {使用 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品/话术资料库并进行 LoRA 促单话术适配}
+        \item {编写 Shell / Python 启动、状态检查、日志采集和进程恢复脚本；完成连续 6 小时运行验证，端到端交互约 17 秒}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {毕业设计 \& Vibe Coding 实践} % Role
-    {基于 RISC-V 的智能家居 AI 助手} % Project
-    {} % Location
-    {2025.09 - 2026.06} % Date(s)
+    {毕业设计}
+    {RISC-V 平台智能家居 AI 助手}
+    {}
+    {2025.09 - 2026.06}
     {
       \begin{cvitems}
-        \item {整合 SillyTavern、GPT-SoVITS 与 Home Assistant，在 RISC-V/Armbian 平台上实现语音交互、多轮对话与智能家居设备控制}
-        \item {在 RTX 3080 Laptop（16GB 显存）上用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B，作为 SillyTavern 的对话后端}
-        \item {七天完成系统从 0 到 1 搭建，顺利通过答辩}
-        \item {引入 Vibe Coding 与 OpenCLA 工作流，将单一智能家居中控进化为通用智能助手}
+        \item {在 RISC-V / Armbian 设备整合 SillyTavern、GPT-SoVITS 与 Home Assistant，实现语音交互、多轮对话和智能家居控制}
+        \item {在 RTX 3080 Laptop（16GB 显存）用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B，作为对话后端}
+        \item {使用 Docker 管理服务运行依赖，配置组件网络通信、启动脚本和基础安全设置；使用 Coding Agent 辅助编码并逐项人工验证}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {Linux 内核与开源生态贡献} % Role
-    {RISC-V/ARM 平台 OpenWrt 适配与主线化} % Project
-    {} % Location
-    {2024.09 - 2025.05} % Date(s)
+    {队长 \& 唯一开发者}
+    {计算机棋类博弈 AI 引擎}
+    {}
+    {2022.03 - 2024.06}
     {
       \begin{cvitems}
-        \item {负责 TH1520、SG2000、JH7110、MT798x 等平台的 OpenWrt/Armbian 系统移植与内核调试}
-        \item {推动核心代码合入上游主线，OpenWrt 主线合并数个提交}
-        \item {为 QModem 新增高通 SIM8202G-M2 5G 模块驱动支持；维护 ImmortalWrt FAQ 文档}
-        \item {参与 Siflower 平台内核升级工作；为 Deepin 操作系统适配 JH7110 GPU 驱动（OpenGL ES）}
+        \item {实现国际跳棋 AI，采用 Alpha-Beta 剪枝、历史启发与哈希表控制博弈树搜索规模；获计算机棋类博弈锦标赛国家级二等奖两次}
+        \item {2022 年使用 AVX 指令集向量化位运算与状态评估，搜索速度提升 17.6\%；2024 年将核心搜索迁移至 GPU，搜索深度增加 6 层}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {虚拟化与网络实验}
+    {Android KVM OpenWrt 虚拟机}
+    {}
+    {2025 - 至今}
+    {
+      \begin{cvitems}
+        \item {在已解锁并 root 的紫光 Android 设备上基于 crosvm / KVM 运行 OpenWrt，完成 UEFI 启动链路改造}
+        \item {针对便携热点网关配置独立 Wi-Fi 与 USB 共享网段，维护 5 GHz 信道、DHCP、路由与防火墙策略，避免子网冲突}
       \end{cvitems}
     }
 

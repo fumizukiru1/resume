@@ -1,41 +1,40 @@
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
+% SECTION TITLE
 %-------------------------------------------------------------------------------
 \cvsection{工作经历}
 
-
 %-------------------------------------------------------------------------------
-%	CONTENT
+% CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
 
 %---------------------------------------------------------
   \cventry
-    {实习生} % Job title
-    {苏珊贝尔} % Organization
-    {辽宁} % Location
-    {2025.06 - 2026.07} % Date(s)
+    {Linux 系统、网络与 AI 服务支持}
+    {苏珊贝尔}
+    {辽宁}
+    {2025.06 - 2026.07}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {独立搭建本地 AI 数字人直播系统，整合 LLM 推理（Ollama）、GPT-SoVITS 语音合成与直播交互链路，支撑境外电商直播场景}
-        \item {使用 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品/话术资料库，并通过 LoRA 适配促单话术与合规约束}
-        \item {在算力受限的边缘端实现交互延迟低于 17 秒的生产级数字人系统，在境外电商直播场景中稳定运行超 6 小时}
-        \item {负责桌面工程、网络运维、境内外电商数据分析及账号矩阵内容运营}
+      \begin{cvitems}
+        \item {独立搭建 AI 数字人直播系统，将 Ollama、GPT-SoVITS、Docker 化服务与直播交互链路部署到运行环境}
+        \item {使用 docker-compose 管理服务依赖、启动顺序与重启策略；部署 Qwen3.5 27B（4.151 bpw 量化）并挂载商品/话术资料库}
+        \item {通过 LoRA 适配促单话术，完成连续 6 小时运行验证，端到端交互约 17 秒}
+        \item {编写 Shell / Python 脚本处理服务启动、健康检查、日志轮转、异常重启与故障记录}
+        \item {维护办公网络与终端环境：配置 VLAN、VPN、防火墙规则，处理网络连接、跨境访问、业务账号权限和常用软硬件问题}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {实习生} % Job title
-    {PLCT（中国科学院软件研究所）} % Organization
-    {北京} % Location
-    {2024.09 - 2025.05} % Date(s)
+    {Linux 系统移植与内核调试（实习）}
+    {PLCT（中国科学院软件研究所）}
+    {北京}
+    {2024.09 - 2025.05}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {负责玄铁 TH1520、算能 SG2000、JH7110 等 RISC-V/ARM 平台的 OpenWrt/Armbian 系统移植与 Linux 内核驱动调试}
-        \item {深入分析芯片 Datasheet 编写 Device Tree，运用 GDB / QEMU 排查内核 Panic 与内存管理问题}
-        \item {为 QModem 新增高通平台 SIM8202G-M2 5G 模块驱动支持，核心代码合入上游主线}
-        \item {遵循开源规范与上游 Maintainer 进行 Code Review，持续维护 ImmortalWrt 的 user-FAQ 文档}
+      \begin{cvitems}
+        \item {维护 Siflower、MediaTek ARM、Airoha 等平台的 OpenWrt / Armbian 构建，配置交叉编译工具链、内核、Device Tree 与系统镜像打包流程}
+        \item {使用 QEMU / GDB、串口和内核日志定位启动、内存管理及驱动问题，完成修改后的实机或模拟环境验证}
+        \item {3 个内核补丁合入 OpenWrt 上游；参与英文 Code Review，维护 ImmortalWrt user-FAQ 文档}
       \end{cvitems}
     }
 
