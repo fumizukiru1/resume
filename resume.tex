@@ -14,6 +14,11 @@
 
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
+% 模板未加载 xeCJK（中文作为主字体设置），XeTeX 默认不启用中文断行，
+% 长中文句子只能在空格处断行、放不下即溢出右边界。显式打开中文断行。
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
 % Color — green for DevOps/automation feel
 \colorlet{awesome}{awesome-nephritis}
 \setbool{acvSectionColorHighlight}{true}
