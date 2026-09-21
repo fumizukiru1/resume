@@ -12,13 +12,21 @@
 - 其他分支都是 `general-full` 的**按岗位裁剪版**：调整取舍与措辞，不新增事实
 - 若某个分支出现了 `general-full` 里没有的事实内容，必须回填到 `general-full`
 
+### 项目经历写法（主简历标准）
+
+`general-full` 的项目经历统一采用**「项目内容 / 项目职责」两段式**，面向 HR 阅读：
+
+- **项目内容**：项目是什么、范围与背景
+- **项目职责**：自己做了什么、有哪些可核验的产出
+
+其他分支沿用各自原有结构；若要把某分支的结构改动带到主简历，按上方「同步规则」第 2 步处理。
+
 ### 已知的结构性差异（非事实差异，属有意为之）
 
 以下差异只在特定分支存在，**不要求**回填到 `general-full`：
 
 | 分支 | 差异 |
 | --- | --- |
-| `full-projects` | 项目经历按「项目内容 / 项目职责」两段式重排（结构差异） |
 | `desktop-support-en` | 额外提供英文版（`resume-en.tex` + `sections/*-en.tex`） |
 | `devops-v2`、`mihoyo-8663` | 含「游戏经历」章节（`sections/gaming.tex`），仅在投递游戏行业时启用 |
 
@@ -51,7 +59,7 @@
 | `desktop-support` | 桌面运维 / IT 技术支持工程师 | 桌面运维岗（中文） |
 | `desktop-support-en` | Desktop Support / IT Support Engineer | 桌面运维岗（英文），见下方说明 |
 | `mihoyo-8663` | Linux 系统构建 / 基础设施自动化工程师 | 米哈游社招投递 |
-| `full-projects` | 开源软件工程师 / Linux 系统工程师 | 项目经历按「项目内容 / 项目职责」两段式重排 |
+| `full-projects` | 开源软件工程师 / Linux 系统工程师 | 两段式项目结构的试验分支，**该结构已并入 `general-full`** |
 
 ### desktop-support-en 的特殊说明
 
