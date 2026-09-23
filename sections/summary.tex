@@ -1,11 +1,21 @@
 %-------------------------------------------------------------------------------
+% SECTION TITLE
+%-------------------------------------------------------------------------------
 \cvsection{个人简介}
 
-
+%-------------------------------------------------------------------------------
+% CONTENT
 %-------------------------------------------------------------------------------
 \begin{cvparagraph}
 
-使用 Linux 作为主要工作环境，习惯在命令行排查问题。能独立完成 SoC 平台从交叉编译工具链到系统镜像的构建和调试。\\
-在 x86 机器上搭建过 k8s、k3s 学习环境，使用 Docker 部署个人网站和应用。\\
-工作中处理过 OpenWrt 路由器的网络配置、VLAN 划分和故障排查。写过少量 Shell 和 Python 脚本用于自动化。
+使用 Linux 作为主要工作环境，习惯用 systemd、journalctl 和命令行排查问题；能独立完成 SoC 平台从交叉编译工具链到系统镜像的构建与调试。\\
+技术栈按工作场景分组：\\
+\textbf{网络与运维}：TCP/IP、VLAN / VPN / 防火墙、OpenWrt 网络配置、LNMP（Nginx / MySQL / PHP）、Linux 系统管理\\
+\textbf{容器与编排}：Docker / docker-compose、Kubernetes（kubeadm / containerd / Flannel）\\
+\textbf{脚本与工具}：Shell / Python、Go（基础）、Make / CMake / Ninja、Git\\
+\textbf{系统构建}：OpenWrt、Armbian、交叉编译、内核配置、Device\nobreakspace{}Tree、镜像打包、UEFI 启动\\
+\textbf{AI 服务}：Ollama、模型量化、LoRA、CUDA / AVX\\
+维护过 RISC-V / ARM / MIPS / x86 平台的 \mbox{OpenWrt}、Armbian 构建环境，使用 QEMU / GDB 定位内核启动和驱动问题，3 个内核补丁合入 \mbox{OpenWrt} 上游。\\
+在办公室与工厂网络环境完成 VLAN 划分、VPN 与防火墙策略配置，处理办公终端、业务账号权限和常用软硬件故障；使用 Docker 部署 LNMP 网站与个人服务。\\
+习惯使用 Shell / Python 编写服务健康检查、日志采集与异常恢复脚本。
 \end{cvparagraph}

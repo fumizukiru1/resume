@@ -1,62 +1,62 @@
 %-------------------------------------------------------------------------------
+% SECTION TITLE
+%-------------------------------------------------------------------------------
 \cvsection{项目经历}
 
-
+%-------------------------------------------------------------------------------
+% CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
 
 %---------------------------------------------------------
   \cventry
-    {独立负责（公司项目）} % Role
-    {AI 数字人直播系统搭建与运维} % Project
-    {} % Location
-    {2025.06 - 2026.07} % Date(s)
+    {Linux 系统构建与开源贡献}
+    {多架构 OpenWrt / Armbian 适配}
+    {}
+    {2024.09 - 至今}
     {
       \begin{cvitems}
-        \item {独立完成后端 LLM、语音合成与直播交互链路：LLM 推理（Ollama）、TTS、弹幕接入均使用 Docker 容器化，docker-compose 编排}
-        \item {Ollama 模型为 Qwen3.5 27B（4.151 bpw 量化），挂载商品/话术资料库，并通过 LoRA 适配直播促单话术}
-        \item {编写 Shell 脚本实现服务健康检查、日志轮转和异常重启}
-        \item {交互流程：用户弹幕 → 直播延迟约 10 秒 → 数字人回复，端到端约 17 秒内}
+        \item {\textbf{项目内容}：基于 \mbox{OpenWrt} / \mbox{Armbian} 的多架构嵌入式 Linux 系统适配与维护，覆盖 TH1520、SG2000、JH7110、MT798x、Siflower 等 SoC 及 RISC-V64 / ARM64 / MIPS / x86 平台，包含系统配置、交叉编译、内核配置、Device\nobreakspace{}Tree 编译与镜像打包全流程。}
+        \item {\textbf{项目职责}：跟踪上游内核驱动变更，使用 QEMU / GDB、串口输出与系统日志复现并定位启动、内存管理与驱动问题，完成修改后的实机或模拟环境验证；参与 Siflower sf21 / sf19a2890 内核由 6.12 升级至 6.18，分析 MIPS / RISC-V 架构、DPNS 以太网驱动与 DMA / NPI 子系统相关修复；向 \mbox{OpenWrt} 主线合入 3 个内核补丁，为 QModem 增加高通 SIM8202G-M2 5G 模块支持，维护 \mbox{ImmortalWrt} user-FAQ 文档。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {个人项目} % Role
-    {多平台 Linux 系统构建与内核贡献} % Project
-    {} % Location
-    {2024.09 - 2025.05} % Date(s)
+    {本地 LLM 与边缘服务部署}
+    {AI 数字人直播系统}
+    {}
+    {2025.06 - 2026.07}
     {
       \begin{cvitems}
-        \item {为 TH1520、SG2000、JH7110、MT798x 等多款 SoC 构建 OpenWrt/Armbian 系统镜像}
-        \item {3 个内核补丁合入 OpenWrt 主线（Siflower、MediaTek ARM、Airoha 平台）}
-        \item {使用 GDB / QEMU 调试内核启动异常和内存管理问题}
+        \item {\textbf{项目内容}：面向直播带货的 AI 数字人交互系统，包含本地 LLM 推理、语音合成与直播弹幕接入链路，需在单机边缘环境内稳定运行并接入商品与话术资料库。}
+        \item {\textbf{项目职责}：独立完成 LLM 推理、GPT-SoVITS 语音链路、直播弹幕接入及数字人交互链路的整体部署；使用 Docker 与 docker-compose 管理服务依赖、启动顺序与重启策略；使用 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品 / 话术资料库并完成 LoRA 促单话术适配；编写 Shell / Python 脚本处理服务启动、状态检查、日志采集与进程恢复；完成连续 6 小时运行验证，端到端交互约 17 秒。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {毕业设计} % Role
-    {RISC-V 平台智能家居 AI 中控系统} % Project
-    {} % Location
-    {2025.09 - 2026.06} % Date(s)
+    {毕业设计}
+    {RISC-V 平台智能家居 AI 助手}
+    {}
+    {2025.09 - 2026.06}
     {
       \begin{cvitems}
-        \item {在 RISC-V 设备上安装 Armbian 系统，部署 SillyTavern、GPT-SoVITS、Home Assistant}
-        \item {在 RTX 3080 Laptop（16GB 显存）上用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B，作为 SillyTavern 的对话后端}
-        \item {使用 Docker 管理上述服务，配置各组件间的网络通信}
+        \item {\textbf{项目内容}：在 RISC-V / \mbox{Armbian} 设备上构建的本地智能家居 AI 助手，整合语音交互、多轮对话与智能家居设备控制，全部组件运行于本地硬件。}
+        \item {\textbf{项目职责}：在 RTX 3080 Laptop（16GB 显存）使用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B 作为对话后端；整合 SillyTavern、GPT-SoVITS 与 Home Assistant，实现语音交互、多轮对话与智能家居控制；使用 Docker 管理服务运行依赖，配置组件网络通信、启动脚本与基础安全设置；使用 Coding Agent 辅助编码并逐项人工验证。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {个人项目} % Role
-    {Docker 搭建 LNMP 网站} % Project
-    {} % Location
-    {2022} % Date(s)
+    {站点部署与运维}
+    {Docker 搭建 LNMP 网站}
+    {}
+    {2022}
     {
       \begin{cvitems}
-        \item {使用 Docker 部署 Nginx + MySQL + PHP 环境，编写 docker-compose.yml 管理多容器}
+        \item {\textbf{项目内容}：公司及个人网站的 LNMP（Linux / Nginx / MySQL / PHP）运行环境，需在单机上管理多个容器、域名解析与 HTTPS 访问。}
+        \item {\textbf{项目职责}：使用 Docker 部署 Nginx + MySQL + PHP，编写 docker-compose.yml 管理多容器启动顺序与数据卷；完成服务器环境部署、域名解析、HTTPS 配置与站点上线，并承担后续日常维护。}
       \end{cvitems}
     }
 
