@@ -11,59 +11,53 @@
 
 %---------------------------------------------------------
   \cventry
-    {基础设施架构} % Role
-    {AI 数字人直播边缘计算基础设施（企业级生产项目）} % Project
-    {} % Location
-    {2025.06 - 2026.07} % Date(s)
+    {容器化部署与运维}
+    {AI 数字人直播系统（边缘单机部署）}
+    {}
+    {2025.06 - 2026.07}
     {
       \begin{cvitems}
-        \item {在算力受限的边缘端设计并部署 AI 推理集群，利用 Docker 容器化 + Ollama 实现模型服务的高可用部署与滚动更新}
-        \item {优化推理流水线资源调度，将 GPU/CPU 利用率提升并实现多路直播并发下延迟稳定可控}
-        \item {编写 Shell / Python 脚本实现健康检查、日志采集、告警通知等自动化运维能力}
-        \item {系统在境外电商直播场景中持续稳定运行超 6 小时，充分验证边缘基础设施的可靠性}
+        \item {\textbf{项目内容}：面向直播带货的 AI 数字人交互系统，包含本地 LLM 推理、语音合成与直播弹幕接入链路，需在单机边缘环境内稳定运行并接入商品与话术资料库。}
+        \item {\textbf{项目职责}：独立完成 LLM 推理、GPT-SoVITS 语音链路与直播弹幕接入的部署；使用 Docker 与 docker-compose 管理服务依赖、启动顺序与重启策略；使用 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品 / 话术资料库并完成 LoRA 促单话术适配；编写 Shell / Python 脚本处理服务启动、状态检查、日志采集与进程恢复；完成连续 6 小时运行验证，端到端交互约 17 秒。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {系统构建 \& 自动化} % Role
-    {多平台 Linux 系统移植与内核主线化} % Project
-    {} % Location
-    {2024.09 - 2025.05} % Date(s)
+    {Linux 系统构建与开源贡献}
+    {多平台 OpenWrt / Armbian 系统移植与内核主线化}
+    {}
+    {2024.09 - 至今}
     {
       \begin{cvitems}
-        \item {独立完成 TH1520、SG2000、JH7110、MT798x 等多款 SoC 的 OpenWrt/Armbian 系统构建全流程自动化}
-        \item {深入分析芯片 Datasheet 并编写 Device Tree，使用 GDB / QEMU 调试内核异常，代码合入上游主线}
-        \item {贡献 QModem 项目，新增高通 SIM8202G-M2 5G 模块驱动支持；参与 Siflower 平台内核升级}
-        \item {维护 ImmortalWrt 用户 FAQ 文档，与上游 Maintainer 进行英文 Code Review}
+        \item {\textbf{项目内容}：基于 \mbox{OpenWrt} / \mbox{Armbian} 的多平台嵌入式 Linux 系统适配与维护，覆盖 TH1520、SG2000、JH7110、MT798x、Siflower 等 SoC 及 RISC-V64 / ARM64 / MIPS / x86 平台，包含系统配置、交叉编译、内核配置、Device\nobreakspace{}Tree 编译与镜像打包全流程。}
+        \item {\textbf{项目职责}：跟踪上游内核驱动变更，使用 QEMU / GDB、串口输出与系统日志复现并定位启动、内存管理与驱动问题；参与 Siflower sf21 / sf19a2890 内核由 6.12 升级至 6.18，分析 DPNS 以太网驱动与 DMA / NPI 子系统相关修复；向 \mbox{OpenWrt} 主线合入 3 个内核补丁，为 QModem 增加高通 SIM8202G-M2 5G 模块支持，维护 \mbox{ImmortalWrt} user-FAQ 文档。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {全栈部署} % Role
-    {基于 RISC-V + Armbian 的智能家居 AI 中控系统（毕业设计）} % Project
-    {} % Location
-    {2025.09 - 2026.06} % Date(s)
+    {毕业设计}
+    {RISC-V 平台智能家居 AI 助手}
+    {}
+    {2025.09 - 2026.06}
     {
       \begin{cvitems}
-        \item {在 RISC-V 边缘设备上集成 SillyTavern + GPT-SoVITS + Home Assistant，实现语音交互与智能设备控制}
-        \item {七天完成从裸机到全功能系统的完整部署，涵盖系统安装、服务编排、网络配置、安全加固}
-        \item {引入 AI 辅助开发工作流（Vibe Coding / OpenCLA），将系统进化为具备复杂任务规划能力的通用 Agent}
+        \item {\textbf{项目内容}：在 RISC-V / \mbox{Armbian} 设备上构建的本地智能家居 AI 助手，整合语音交互、多轮对话与智能家居设备控制，全部组件运行于本地硬件。}
+        \item {\textbf{项目职责}：在 RTX 3080 Laptop（16GB 显存）使用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B 作为对话后端；整合 SillyTavern、GPT-SoVITS 与 Home Assistant，实现语音交互、多轮对话与智能家居控制；使用 Docker 管理服务运行依赖，配置组件网络通信与启动脚本；使用 Coding Agent 辅助编码并逐项人工验证。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {基础设施实践} % Role
-    {容器化 Web 服务与嵌入式系统集成} % Project
-    {} % Location
-    {2022 - 2025} % Date(s)
+    {容器化建站与嵌入式工具}
+    {LNMP 网站环境与嵌入式系统开发}
+    {}
+    {2022 - 2025}
     {
       \begin{cvitems}
-        \item {基于 Docker 搭建 LNMP 全栈环境（Nginx + MySQL + PHP）并进行性能调优与安全加固}
-        \item {开发维护基于 STM32 的内存条 SPD 烧录器工具链及固件}
-        \item {完成基于树莓派 4 的竞速越野小车硬件电路设计与视觉识别系统部署}
+        \item {\textbf{项目内容}：基于 Docker 的 LNMP 全栈网站环境与嵌入式工具链，覆盖公司及个人网站的建站上线与嵌入式固件开发。}
+        \item {\textbf{项目职责}：搭建 LNMP（Nginx / MySQL / PHP）环境并完成性能调优与安全加固，处理域名解析、HTTPS 配置与站点日常维护；开发维护基于 STM32 的内存条 SPD 烧录器工具链及固件；完成基于树莓派 4 的竞速越野小车硬件电路设计与视觉识别系统部署。}
       \end{cvitems}
     }
 

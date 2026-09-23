@@ -11,30 +11,30 @@
 
 %---------------------------------------------------------
   \cventry
-    {运维工程师 / 桌面工程师} % Job title
-    {苏珊贝尔} % Organization
-    {辽宁} % Location
-    {2025.06 - 2026.07} % Date(s)
+    {运维工程师 / 桌面工程师}
+    {苏珊贝尔}
+    {辽宁}
+    {2025.06 - 2026.07}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {负责公司生产环境服务器运维，保障电商直播系统 7×24 小时稳定运行，在边缘算力受限条件下实现低于 17 秒的交互延迟}
-        \item {搭建并维护本地 AI 推理服务（基于 Ollama + Docker），完成模型量化部署、镜像管理与版本迭代，将原型开发到生产部署周期从数月压缩至数周}
-        \item {管理网络基础设施，包括 VLAN 划分、防火墙策略、VPN 隧道配置及跨境网络优化}
-        \item {负责全公司桌面系统标准化运维、账号权限管理及安全策略执行}
+      \begin{cvitems}
+        \item {独立搭建 AI 数字人直播系统，将 Ollama、GPT-SoVITS、Docker 化服务与直播交互链路部署到边缘运行环境，完成连续 6 小时运行验证，端到端交互约 17 秒}
+        \item {使用 docker-compose 管理服务依赖、启动顺序与重启策略；部署 Qwen3.5 27B（4.151 bpw 量化）并挂载商品/话术资料库，通过 LoRA 适配促单话术}
+        \item {编写 Shell / Python 脚本处理服务启动、健康检查、日志轮转、异常重启与故障记录}
+        \item {维护办公网络与终端环境：配置 VLAN、VPN、防火墙规则，处理网络连接、跨境访问、业务账号权限和常用软硬件问题}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {实习生（开源基础设施方向）} % Job title
-    {PLCT（中国科学院软件研究所）} % Organization
-    {北京} % Location
-    {2024.09 - 2025.05} % Date(s)
+    {Linux 系统移植与内核调试（实习）}
+    {PLCT（中国科学院软件研究所）}
+    {北京}
+    {2024.09 - 2025.05}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {负责多款 RISC-V / ARM 开发板的系统构建（OpenWrt / Armbian），独立完成从交叉编译工具链搭建到内核配置、驱动调试的全流程}
-        \item {使用 GDB / QEMU 定位并修复内核 Panic 与内存管理问题，推动核心代码合入 OpenWrt 上游主线}
-        \item {编写并维护 ImmortalWrt 用户 FAQ 文档，积极参与开源社区 Code Review，具备优秀的英文技术沟通能力}
+      \begin{cvitems}
+        \item {维护 Siflower、MediaTek ARM 平台的 OpenWrt / Armbian 构建，并完成 TH1520、SG2000、JH7110、MT798x 等 SoC 的交叉编译工具链、内核、Device Tree 与系统镜像打包配置}
+        \item {使用 QEMU / GDB、串口和内核日志定位启动、内存管理及驱动问题，完成修改后的实机或模拟环境验证}
+        \item {3 个内核补丁合入 OpenWrt 上游；参与英文 Code Review，维护 ImmortalWrt user-FAQ 文档}
       \end{cvitems}
     }
 
