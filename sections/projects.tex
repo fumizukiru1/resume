@@ -12,45 +12,39 @@
 %---------------------------------------------------------
   \cventry
     {AI 工程化与边缘计算部署} % Project role
-    {本地 AI 数字人直播系统（企业级生产项目）} % Project
+    {本地 AI 数字人直播系统} % Project
     {} % Location
     {2025.06 - 2026.07} % Date(s)
     {
       \begin{cvitems}
-        \item {独立完成后端 LLM、语音合成与直播交互链路：LLM 推理（Ollama）、TTS、弹幕接入均使用 Docker 容器化}
-        \item {Ollama 模型为 Qwen3.5 27B（4.151 bpw 量化），挂载商品/话术资料库，并通过 LoRA 适配电商直播促单话术}
-        \item {实现交互延迟低于 17 秒的实时交互系统，在境外直播场景中稳定运行超 6 小时}
+        \item {\textbf{项目内容}：面向电商直播的 AI 数字人交互系统，包含本地 LLM 推理、语音合成与直播弹幕接入链路，需在单机边缘环境稳定运行并接入商品 / 话术资料库。}
+        \item {\textbf{项目职责}：独立完成后端 LLM、语音合成与直播交互链路，服务以 Docker 容器化部署；使用 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品 / 话术资料库并通过 LoRA 适配促单话术；完成连续 6 小时运行验证，端到端交互约 17 秒。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
     {队长 \& 唯一开发者} % Role
-    {计算机棋类博弈 AI 引擎（两届国赛获奖）} % Project
+    {计算机棋类博弈 AI 引擎} % Project
     {} % Location
     {2022.03 - 2024.06} % Date(s)
     {
       \begin{cvitems}
-        \item {在算力不足情况下实现高搜索深度的国际跳棋 AI，应对博弈树爆炸问题}
-        \item {使用 Alpha-Beta 剪枝架构，引入历史启发与哈希表减少冗余搜索}
-        \item {2022 版：利用 AVX 指令集对位运算与状态评估进行向量化重构，搜索速度提升 17.6\%}
-        \item {2024 版：使用 Python3 重写并将核心搜索迁移至 GPU，CUDA 并行化释放 CPU 瓶颈，搜索深度增加 6 层}
-        \item {国家级二等奖（2 次）、辽宁省级二等/三等奖各 1 次}
+        \item {\textbf{项目内容}：国际跳棋博弈 AI 引擎，需在有限算力下控制博弈树搜索规模并持续提升搜索深度，用于参加计算机棋类博弈锦标赛。}
+        \item {\textbf{项目职责}：实现 Alpha-Beta 剪枝架构，引入历史启发与哈希表减少冗余搜索；2022 版使用 AVX 指令集对位运算与状态评估做向量化重构，搜索速度提升 17.6\%；2024 版使用 Python3 重写并将核心搜索迁移至 GPU，CUDA 并行化释放 CPU 瓶颈，搜索深度增加 6 层；获国家级二等奖 2 次。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {毕业设计 \& Vibe Coding 实践} % Role
+    {毕业设计} % Role
     {基于 RISC-V 的智能家居 AI 助手} % Project
     {} % Location
     {2025.09 - 2026.06} % Date(s)
     {
       \begin{cvitems}
-        \item {整合 SillyTavern、GPT-SoVITS 与 Home Assistant，在 RISC-V/Armbian 平台上实现语音交互、多轮对话与智能家居设备控制}
-        \item {在 RTX 3080 Laptop（16GB 显存）上用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B，作为 SillyTavern 的对话后端}
-        \item {七天完成系统从 0 到 1 搭建，顺利通过答辩}
-        \item {引入 Vibe Coding 与 OpenCLA 工作流，将单一智能家居中控进化为通用智能助手}
+        \item {\textbf{项目内容}：在 RISC-V / Armbian 设备上构建的本地智能家居 AI 助手，整合语音交互、多轮对话与智能家居设备控制，全部组件运行于本地硬件。}
+        \item {\textbf{项目职责}：在 RTX 3080 Laptop（16GB 显存）上用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B，作为 SillyTavern 的对话后端；整合 SillyTavern、GPT-SoVITS 与 Home Assistant，实现语音交互、多轮对话与智能家居设备控制；使用 Docker 管理服务运行依赖，配置组件网络通信与启动脚本；使用 Coding Agent 辅助编码并逐项人工验证；顺利通过答辩。}
       \end{cvitems}
     }
 
@@ -62,10 +56,8 @@
     {2024.09 - 2025.05} % Date(s)
     {
       \begin{cvitems}
-        \item {负责 TH1520、SG2000、JH7110、MT798x 等平台的 OpenWrt/Armbian 系统移植与内核调试}
-        \item {推动核心代码合入上游主线，OpenWrt 主线合并数个提交}
-        \item {为 QModem 新增高通 SIM8202G-M2 5G 模块驱动支持；维护 ImmortalWrt FAQ 文档}
-        \item {参与 Siflower 平台内核升级工作；为 Deepin 操作系统适配 JH7110 GPU 驱动（OpenGL ES）}
+        \item {\textbf{项目内容}：基于 OpenWrt / Armbian 的 RISC-V / ARM 平台系统适配与内核维护，覆盖 TH1520、SG2000、JH7110、MT798x 等 SoC，包含交叉编译、内核配置、Device Tree 编译与镜像打包全流程。}
+        \item {\textbf{项目职责}：跟踪上游内核驱动变更，使用 QEMU / GDB 与系统日志复现并定位启动、内存管理与驱动问题，完成修改后的实机或模拟环境验证；为 QModem 新增高通 SIM8202G-M2 5G 模块驱动支持；向 OpenWrt 主线合入 3 个内核补丁；参与 Siflower 平台内核升级工作；为 Deepin 操作系统适配 JH7110 GPU 驱动（OpenGL ES）；维护 ImmortalWrt user-FAQ 文档。}
       \end{cvitems}
     }
 
