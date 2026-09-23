@@ -1,69 +1,63 @@
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
+%\tSECTION TITLE
 %-------------------------------------------------------------------------------
 \cvsection{项目经历}
 
 
 %-------------------------------------------------------------------------------
-%	CONTENT
+%\tCONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
 
 %---------------------------------------------------------
   \cventry
-    {CI/CD \& 服务交付} % Role
-    {AI 推理服务自动化部署管线（企业级生产项目）} % Project
+    {CI/CD \& 容器化交付} % Role
+    {AI 数字人直播系统} % Project
     {} % Location
     {2025.06 - 2026.07} % Date(s)
     {
       \begin{cvitems}
-        \item {构建端到端交付流水线：LLM 模型量化 → Docker 镜像构建（Dockerfile 优化）→ 边缘节点部署 → 健康检查 → 灰度切换}
-        \item {编写自动化运维脚本（Shell / Python），实现服务自愈、日志采集与性能指标监控}
-        \item {优化容器镜像体积与推理延迟，实现多路并发下的稳定低延迟（<17s）}
-        \item {在算力受限的边缘环境中设计高可用部署策略，生产零故障运行超 6 小时}
+        \item {\textbf{项目内容}：面向直播带货的 AI 数字人交互系统，包含本地 LLM 推理、语音合成与直播弹幕接入链路，需在单机边缘环境内稳定运行并接入商品与话术资料库。}
+        \item {\textbf{项目职责}：独立完成 LLM 推理、GPT-SoVITS 语音链路、直播弹幕接入及数字人交互链路的整体部署；使用 Docker 与 docker-compose 管理服务依赖、启动顺序与重启策略；使用 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品 / 话术资料库并完成 LoRA 促单话术适配；编写 Shell / Python 脚本处理服务启动、状态检查、日志采集与进程恢复；完成连续 6 小时运行验证，端到端交互约 17 秒。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
     {Build \& Release Engineering} % Role
-    {多架构 Linux 发行版构建自动化} % Project
+    {多架构 OpenWrt / Armbian 构建与适配} % Project
     {} % Location
-    {2024.09 - 2025.05} % Date(s)
+    {2024.09 - 至今} % Date(s)
     {
       \begin{cvitems}
-        \item {搭建跨架构（RISC-V / ARM / MIPS）交叉编译流水线，使用 Make / Ninja / CMake 管理复杂构建依赖}
-        \item {标准化 TH1520、SG2000、JH7110、MT798x 等 SoC 平台的内核配置、Device Tree 编译和镜像打包流程}
-        \item {与上游 Maintainer 进行英文 Code Review，推动内核补丁合入 OpenWrt 主线 — 完整的开源 Release 流程}
-        \item {使用 QEMU + GDB 搭建自动化内核回归测试环境，实现 CI 驱动的内核错误检测}
+        \item {\textbf{项目内容}：基于 \mbox{OpenWrt} / \mbox{Armbian} 的多架构嵌入式 Linux 系统适配与维护，覆盖 TH1520、SG2000、JH7110、MT798x、Siflower 等 SoC 及 RISC-V64 / ARM64 / MIPS / x86 平台，包含系统配置、交叉编译、内核配置、Device\nobreakspace{}Tree 编译与镜像打包全流程。}
+        \item {\textbf{项目职责}：跟踪上游内核驱动变更，使用 QEMU / GDB、串口输出与系统日志复现并定位启动、内存管理与驱动问题，完成修改后的实机或模拟环境验证；参与 Siflower sf21 / sf19a2890 内核由 6.12 升级至 6.18，分析 MIPS / RISC-V 架构、DPNS 以太网驱动与 DMA / NPI 子系统相关修复；使用 GitHub Actions 与交叉编译工具链编排多架构构建任务；向 \mbox{OpenWrt} 主线合入 3 个内核补丁，为 QModem 增加高通 SIM8202G-M2 5G 模块支持，维护 \mbox{ImmortalWrt} user-FAQ 文档。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
-    {全栈 DevOps 实践} % Role
-    {智能家居 AI 中控系统 Dev-to-Prod 交付（毕业设计）} % Project
+    {服务编排与部署} % Role
+    {RISC-V 平台智能家居 AI 助手（毕业设计）} % Project
     {} % Location
     {2025.09 - 2026.06} % Date(s)
     {
       \begin{cvitems}
-        \item {在 RISC-V 边缘设备上完整交付一套 AI 智能助手系统，涵盖裸机安装 → 服务编排 → 网络配置 → 安全加固}
-        \item {集成 SillyTavern + GPT-SoVITS + Home Assistant 三个异构服务，通过 Docker 进行服务编排与生命周期管理}
-        \item {引入 AI 辅助开发工作流（Vibe Coding）加速系统迭代，验证了 AI 在 DevOps 工具链中的增效潜力}
+        \item {\textbf{项目内容}：在 RISC-V / \mbox{Armbian} 设备上构建的本地智能家居 AI 助手，整合语音交互、多轮对话与智能家居设备控制，全部组件运行于本地硬件。}
+        \item {\textbf{项目职责}：在 RTX 3080 Laptop（16GB 显存）使用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B 作为对话后端；整合 SillyTavern、GPT-SoVITS 与 Home Assistant，实现语音交互、多轮对话与智能家居控制；使用 Docker 管理服务运行依赖，配置组件网络通信、启动脚本与基础安全设置；使用 Coding Agent 辅助编码并逐项人工验证。}
       \end{cvitems}
     }
 
 %---------------------------------------------------------
   \cventry
     {性能工程} % Role
-    {计算机博弈 AI 引擎的性能优化} % Project
+    {计算机棋类博弈 AI 引擎} % Project
     {} % Location
     {2022.03 - 2024.06} % Date(s)
     {
       \begin{cvitems}
-        \item {作为队长与唯一开发者，实现高性能国际跳棋 AI，连续两届国赛获奖}
-        \item {使用 AVX 指令集向量化优化，搜索速度提升 17.6\%；将核心搜索迁移至 GPU（CUDA），搜索深度增加 6 层}
-        \item {体现了性能调优、资源利用率优化和算法工程化的综合能力}
+        \item {\textbf{项目内容}：国际跳棋博弈 AI 引擎，需在有限算力下控制博弈树搜索规模并持续提升搜索深度，参加计算机棋类博弈锦标赛。}
+        \item {\textbf{项目职责}：担任队长与唯一开发者，实现 Alpha-Beta 剪枝、历史启发与哈希表等搜索优化；2022 年使用 AVX 指令集向量化位运算与状态评估，搜索速度提升 17.6\%；2024 年将核心搜索迁移至 GPU，搜索深度增加 6 层。项目获计算机棋类博弈锦标赛国家级二等奖两次。}
       \end{cvitems}
     }
 
