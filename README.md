@@ -59,6 +59,7 @@
 | `desktop-support` | 桌面运维 / IT 技术支持工程师 | 桌面运维岗（中文） |
 | `desktop-support-en` | Desktop Support / IT Support Engineer | 桌面运维岗（英文），见下方说明 |
 | `mihoyo-8663` | Linux 系统构建 / 基础设施自动化工程师 | 米哈游社招投递 |
+| `ai-agent-ops` | AI Agent 运维工程师 / AI 基础设施运维 | AI Agent Ops / AI 基础设施运维方向 |
 | `full-projects` | 开源软件工程师 / Linux 系统工程师 | 两段式项目结构的试验分支，**该结构已并入 `general-full`** |
 
 ### desktop-support-en 的特殊说明
