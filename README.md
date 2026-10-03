@@ -29,6 +29,7 @@
 | --- | --- |
 | `desktop-support-en` | 额外提供英文版（`resume-en.tex` + `sections/*-en.tex`） |
 | `devops-v2`、`mihoyo-8663` | 含「游戏经历」章节（`sections/gaming.tex`），仅在投递游戏行业时启用 |
+| `ops-engineer-v2` | **换了模板**：`resume.tex` 为自包含单文件（`article` + `xeCJK` + `titlesec` + `enumitem`），不再加载 `awesome-cv.cls`，也不读 `sections/*.tex`（那些文件保留给 `ops-engineer` 等分支用）。它编译需要 `xeCJK` 与 `Nimbus Sans`（拉丁，Helvetica 系）+ `Noto Sans CJK SC`（中文） |
 
 > 「游戏经历」在 `mihoyo-8663` 的后续提交中被主动移除，是刻意取舍，不要当成遗漏回填。
 
@@ -54,6 +55,7 @@
 | `master` | 开源软件工程师 · Linux 内核开发 | 内核方向早期版本 |
 | `it-support` | IT 技术支持 / 网络运维工程师 | 网络与终端支持岗 |
 | `ops-engineer` | 运维工程师 · Linux 系统 / 网络与服务运维 | 运维岗（系统 / 网络 / 服务运维），两页版 |
+| `ops-engineer-v2` | 运维工程师 · Linux 系统 / 网络与服务运维 | 同一定位的**另一套版式**（仿外部参考简历：居中抬头 + 红色小节标题带通栏横线 + 技能块前移）。**单文件 `resume.tex`，不 `\input{sections/}`** |
 | `devops-cicd` | DevOps 工程师 / SRE · 云原生基础设施 | DevOps / CI-CD 方向 |
 | `devops-v2` | 云原生运维 / DevOps（求职方向） | DevOps 方向第二版 |
 | `k8s-ops` | 云原生运维开发工程师 · Linux 系统专家 | Kubernetes / 云原生运维 |

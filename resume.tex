@@ -1,53 +1,192 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
+% 版式仿「李典铮-运维工程师」：居中姓名 + 红色小节标题通栏横线 + 公司/职位/日期三行式
+% + 紧凑单行 bullet + 技能块「加粗组名 + 内容」双栏。单文件，不再 include sections/。
 
-%-------------------------------------------------------------------------------
-%\tCONFIGURATIONS
-%-------------------------------------------------------------------------------
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[10.5pt,a4paper]{article}
 
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.65cm,top=1.2cm,bottom=1.3cm]{geometry}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
 
-% 模板未加载 xeCJK（中文作为主字体设置），XeTeX 默认不启用中文断行，
-% 长中文句子只能在空格处断行、放不下即溢出右边界。显式打开中文断行。
+% ---------- 字体：拉丁用 Helvetica 系（Nimbus Sans），中文 Noto Sans CJK SC ----------
+\setmainfont{Nimbus Sans}
+\setsansfont{Nimbus Sans}
+\setCJKmainfont{Noto Sans CJK SC}[BoldFont=Noto Sans CJK SC Bold]
+\setCJKsansfont{Noto Sans CJK SC}[BoldFont=Noto Sans CJK SC Bold]
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
-% Blue for infrastructure / IT operations
-\colorlet{awesome}{awesome-skyblue}
-\setbool{acvSectionColorHighlight}{true}
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+% ---------- 配色（对齐参考件的砖红） ----------
+\definecolor{accent}{HTML}{B0342A}
+\definecolor{muted}{HTML}{5A5A5A}
 
-%-------------------------------------------------------------------------------
-%\tPERSONAL INFORMATION
-%-------------------------------------------------------------------------------
-\chinesename{朱宇杰}
-\position{运维工程师{\enskip\cdotp\enskip}Linux 系统 / 网络与服务运维}
-\address{上海市（现居）}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.06}
 
-\mobile{(+86) 155-2385-6350}
-\email{init233@outlook.com}
-\github{libiunc}
+% ---------- 小节标题：红色加粗 + 通栏细横线 ----------
+\newsavebox{\sectbox}
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  \needspace{3\baselineskip}%
+  \noindent
+  \sbox{\sectbox}{\color{accent}\bfseries\fontsize{14.5}{16}\selectfont #1}%
+  \usebox{\sectbox}\hspace{5pt}%
+  \textcolor{accent}{\rule[4.4pt]{\dimexpr\linewidth-\wd\sectbox-5pt\relax}{0.9pt}}%
+  \par\vspace{2.5pt}%
+}
 
-\quote{系统与网络运维 · 账号权限与访问控制 · 备份与恢复 · 服务部署与长期维护}
+% ---------- 公司 / 地点 / 职位 / 日期 ----------
+\newcommand{\jobentry}[4]{%
+  \vspace{3pt}%
+  \noindent{\bfseries #1}\hfill{\color{accent}\bfseries\small #2}\par
+  \vspace{0.5pt}%
+  \noindent{\small #3}\hfill{\color{muted}\small #4}\par
+  \vspace{0.5pt}%
+}
 
-%-------------------------------------------------------------------------------
+% ---------- 项目条目标题 ----------
+\newcommand{\projentry}[2]{%
+  \vspace{3pt}%
+  \noindent{\bfseries #1}\hfill{\color{muted}\small #2}\par
+  \vspace{0.5pt}%
+}
+
+% ---------- 技能行：定宽加粗组名 + 右侧内容（续行左对齐到内容列） ----------
+\newcommand{\skillrow}[2]{%
+  \noindent
+  \begin{minipage}[t]{2.45cm}\bfseries\small #1\end{minipage}%
+  \begin{minipage}[t]{\dimexpr\linewidth-2.45cm\relax}\small #2\end{minipage}%
+  \par\vspace{1pt}%
+}
+
+% ---------- 紧凑 bullet 列表 ----------
+\newenvironment{bullets}{%
+  \begin{itemize}[leftmargin=1.05em,labelsep=0.42em,itemsep=0.6pt,topsep=1.2pt,parsep=0pt,partopsep=0pt,label=\textbullet]%
+  \small%
+}{\end{itemize}}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
 \begin{document}
 
-\makecvheader[C]
+% ================= 抬头 =================
+\begin{center}
+  {\bfseries\fontsize{25}{28}\selectfont 朱宇杰}\\[3pt]
+  {\color{accent}\bfseries\fontsize{11}{13}\selectfont 运维工程师 \quad·\quad Linux 系统 / 网络与服务运维}\\[5pt]
+  {\itshape\color{muted}\small “系统稳定靠的是可解释的变更，而不是运气。”}\\[4pt]
+  {\color{muted}\small 上海（现居）\quad·\quad (+86) 155-2385-6350\quad·\quad init233@outlook.com\quad·\quad github.com/libiunc}
+\end{center}
+\vspace{-2pt}
 
-\makecvfooter
-  {\today}
-  {朱宇杰~~~·~~~运维工程师}
-  {\thepage}
+% ================= Summary =================
+\cvsection{Summary}
+{\small
+1 年 Linux 系统与桌面 / 网络运维经验，另有一段 Linux 系统移植与内核调试实习。日常用 Shell / Python 写巡检、健康检查、日志采集与异常恢复脚本；维护办公网络接入、VLAN / VPN / 防火墙策略与多网段规划，按终端 → 网络 → 服务端顺序定位故障。独立完成 LNMP 站点与本地 AI 服务的环境搭建与长期运维，覆盖数据库与站点数据备份、升级前快照、换机搬迁与跨环境恢复；熟悉账号权限管理、访问面收敛与备份恢复流程。有国产麒麟（KylinOS）、统信 UOS / 深度环境下的部署与配置经验。持 HCIA-Datacom（华为认证）与网络与信息安全管理员（三级 / 高级工）。\par
+}
 
-%-------------------------------------------------------------------------------
-\input{sections/summary.tex}
-\input{sections/experience.tex}
-\input{sections/projects.tex}
-\input{sections/education.tex}
-\input{sections/skills.tex}
-\input{sections/honors.tex}
+% ================= Skills =================
+\cvsection{Skills}
+\skillrow{系统 / 终端}{Linux（Debian / Ubuntu 系、\mbox{OpenWrt}、\mbox{Armbian}）、Windows 与 Windows Server 基础运维；系统安装配置、驱动与常用软件部署、软硬件故障定位}
+\skillrow{网络}{TCP/IP、VLAN、DHCP / DNS 排障、VPN、防火墙与 nftables 策略路由、多网段与子网规划、无线热点网关、办公网络接入与线路维护、连接异常定位}
+\skillrow{服务 / 虚拟化}{LNMP（Nginx / MySQL / PHP）站点环境、Docker 与 docker-compose 服务编排、KVM / QEMU / crosvm 虚拟化、\mbox{OpenWrt} / \mbox{Armbian} 系统构建与镜像打包、Kubernetes（kubeadm 学习环境）}
+\skillrow{自动化 / 脚本}{Shell / Python 编写巡检、健康检查、日志采集与异常恢复脚本；PXE / Cobbler / Ansible 批量装机与节点配置}
+\skillrow{监控 / 日志}{服务与设备运行状态巡检、日志采集与轮转、异常自动发现与通知、故障记录与统计}
+\skillrow{备份 / 恢复}{MySQL 与站点数据（wp-content）备份、升级前快照与回滚点、换机搬迁与域名解析切换、跨环境重建后的数据恢复}
+\skillrow{权限 / 安全}{多用户账号与口令、角色权限与最小权限收敛、IP 白名单、反向代理与 HTTPS、对外端口收敛；AD / GPO 与 Entra ID 基础配置；Linux 权限 / IAM-RBAC}
+\skillrow{信创适配}{国产麒麟（KylinOS）、统信 UOS / 深度（Deepin）环境下完成软件部署、软件源与依赖配置、兼容性排查}
+\skillrow{文档 / 协作}{运维技术文档与 FAQ（\mbox{ImmortalWrt} user-FAQ）、故障处理步骤与运行记录、英文技术文档与 Code Review、Git}
+\skillrow{认证}{HCIA-Datacom（华为认证 · 数据通信，有效至 2027.01）；网络与信息安全管理员（三级 / 高级工）；CET-4（433）}
 
-%-------------------------------------------------------------------------------
+% ================= Work Experience =================
+\cvsection{Work Experience}
+
+\jobentry{苏珊贝尔}{辽宁}{桌面与网络运维、Linux 系统与 AI 服务支持}{2025.06 - 2026.07}
+\begin{bullets}
+  \item 负责办公网与终端环境维护：桌面软硬件（整机、显示器、打印机、扫描仪）安装配置与故障处理，办公网络接入与线路维护，配置 VLAN / VPN / 防火墙策略
+  \item 排查终端无法联网、跨境访问与服务连接异常，按终端 → 网络 → 服务端顺序定位问题并记录处理过程
+  \item 独立搭建并运维 AI 数字人直播系统：用 Docker / docker-compose 管理服务依赖、启动顺序与重启策略，通过 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品 / 话术资料库并完成 LoRA 促单话术适配
+  \item 对比不同模型与量化版本的表现与调用开销，据此确定上线配置；完成连续 6 小时运行验证，端到端交互约 17 秒
+  \item 编写 Shell / Python 脚本处理服务启动、健康检查、日志轮转与异常重启，保留运行日志用于配置调整与问题回溯
+  \item 处理业务平台账号开通、权限调整、登录异常及人员变更后的权限回收；撰写运维文档，统计整理故障与处理记录
+  \item 在国产麒麟（KylinOS）与统信 UOS 环境下完成软件安装、软件源与依赖配置、兼容性排查
+\end{bullets}
+
+\jobentry{PLCT（中国科学院软件研究所）}{北京}{Linux 系统移植与内核调试（实习）}{2024.09 - 2025.05}
+\begin{bullets}
+  \item 维护 Siflower、MediaTek ARM、Airoha 等平台的 \mbox{OpenWrt} / \mbox{Armbian} 构建，配置交叉编译工具链、内核、Device Tree 与系统镜像打包流程
+  \item 使用 QEMU / GDB、串口输出与内核日志定位启动失败、内存管理与驱动异常，完成修改后的实机或模拟环境验证
+  \item 参与 Siflower sf21 / sf19a2890 内核由 6.12 升级至 6.18，分析 DPNS 以太网驱动与 DMA / NPI 子系统相关修复
+  \item 3 个内核补丁合入 \mbox{OpenWrt} 上游；参与英文 Code Review，维护 \mbox{ImmortalWrt} user-FAQ 文档
+\end{bullets}
+
+% ================= Projects =================
+\cvsection{Projects}
+
+\projentry{AI 陪聊（角色扮演）服务私有部署与长期运维（自建）}{2025 - 至今}
+\begin{bullets}
+  \item 私有部署 AI 陪聊服务：前端 SillyTavern，后端接入本地 Ollama 模型与云端模型 API 两条通道，含角色卡、世界书与对话预设内容体系，长期运行并持续维护
+  \item 对 \mbox{data} 目录（聊天记录、角色卡、世界书、配置）做备份与恢复，升级 / 迁移前先备份、出错回滚；其中一套部署在 Android 设备上 KVM / chroot 虚拟机内的 Alpine 环境，完成过跨环境重建与数据恢复
+  \item 访问控制启用多用户账号与口令、IP 白名单，服务仅监听内网并经反向代理与 HTTPS 提供；处理模型切换、上下文长度、响应变慢与连接中断等服务侧问题
+\end{bullets}
+
+\projentry{电商站点搭建与长期维护（自有站点）}{2025 - 至今}
+\begin{bullets}
+  \item 面向 B2C 汽车配件 / 漆面业务的独立电商站点（WordPress + WooCommerce），部署于新加坡云主机，自有域名与解析服务
+  \item 搭建 LNMP（Nginx / MySQL / PHP）环境并完成站点上线，配置域名解析、HTTPS 与 Cloudflare 记录；对数据库与 wp-content 做备份并在升级前留存快照
+  \item 更换主机时搬迁站点与数据、切换域名解析；排查访问缓慢与超时、调整缓存与性能配置；维护后台账号与角色权限、收敛对外暴露端口
+\end{bullets}
+
+\projentry{多架构 \mbox{OpenWrt} / \mbox{Armbian} 系统适配与维护}{2024.09 - 至今}
+\begin{bullets}
+  \item 覆盖 TH1520、SG2000、JH7110、MT798x、Siflower 等 SoC 及 RISC-V64 / ARM64 / MIPS / x86 平台，包含系统配置、交叉编译、内核配置、Device\nobreakspace{}Tree 编译与镜像打包全流程
+  \item 跟踪上游内核与驱动变更，使用 QEMU / GDB、串口输出与系统日志复现并定位启动、内存管理与驱动问题，完成修改后的实机或模拟环境验证
+\end{bullets}
+
+\projentry{Android KVM / crosvm 便携网关（自建）}{2025 - 至今}
+\begin{bullets}
+  \item 在已解锁并 root 的 Android 设备上完成 crosvm / KVM 虚拟化部署与 UEFI 启动链路改造，以 \mbox{OpenWrt} 作为网络宿主
+  \item 为 Wi-Fi 热点与 USB 共享规划独立网段与 DHCP 地址池、避免子网冲突；维护 5 GHz 信道、路由与防火墙策略，处理终端接入与跨网段访问问题
+\end{bullets}
+
+\projentry{RISC-V 平台智能家居 AI 助手（毕业设计）}{2025.09 - 2026.06}
+\begin{bullets}
+  \item 在 RISC-V / \mbox{Armbian} 设备上整合语音交互、多轮对话与智能家居设备控制，全部组件运行于本地硬件
+  \item 在 RTX 3080 Laptop（16GB 显存）用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B 作为对话后端，整合 SillyTavern、GPT-SoVITS 与 Home Assistant；用 Docker 管理服务运行依赖，配置组件网络通信、启动脚本与基础安全设置
+\end{bullets}
+
+% ================= Certificates =================
+\cvsection{Certificates \& Awards}
+
+\noindent
+\begin{minipage}[t]{2.45cm}\bfseries\small 专业证书\end{minipage}%
+\begin{minipage}[t]{\dimexpr\linewidth-2.45cm\relax}\small
+HCIA-Datacom（华为认证 · 数据通信，有效期至 2027.01）\\
+网络与信息安全管理员（三级 / 高级工）\\
+CET-4（433 分）
+\end{minipage}
+\par\vspace{2pt}
+
+\noindent
+\begin{minipage}[t]{2.45cm}\bfseries\small 获奖\end{minipage}%
+\begin{minipage}[t]{\dimexpr\linewidth-2.45cm\relax}\small
+辽宁省第二届职业技能大赛（云计算）铜牌\\
+计算机棋类博弈锦标赛国家级二等奖（2 次，队长 / 唯一开发者）；省级二等奖 / 三等奖\\
+第十三届蓝桥杯 C/C++ 大学 B 组省级三等奖
+\end{minipage}
+
+% ================= Education =================
+\cvsection{Education}
+
+\jobentry{大连理工大学城市学院}{辽宁省大连市}{工学本科 · 计算机科学与技术（大数据方向）}{2021 - 2025}
+
 \end{document}
