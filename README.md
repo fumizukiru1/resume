@@ -53,6 +53,7 @@
 | `general-full` | 开源软件工程师 / Linux 系统工程师 | **主简历**，内容最全，其余分支的基准 |
 | `master` | 开源软件工程师 · Linux 内核开发 | 内核方向早期版本 |
 | `it-support` | IT 技术支持 / 网络运维工程师 | 网络与终端支持岗 |
+| `ops-engineer` | 运维工程师 · Linux 系统 / 网络与服务运维 | 运维岗（系统 / 网络 / 服务运维），两页版 |
 | `devops-cicd` | DevOps 工程师 / SRE · 云原生基础设施 | DevOps / CI-CD 方向 |
 | `devops-v2` | 云原生运维 / DevOps（求职方向） | DevOps 方向第二版 |
 | `k8s-ops` | 云原生运维开发工程师 · Linux 系统专家 | Kubernetes / 云原生运维 |
