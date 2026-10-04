@@ -98,10 +98,10 @@
 \cvsection{Skills}
 \skillrow{系统 / 终端}{Linux（Debian / Ubuntu 系、\mbox{OpenWrt}、\mbox{Armbian}）、Windows 与 Windows Server 基础运维；系统安装配置、驱动与常用软件部署、软硬件故障定位}
 \skillrow{网络}{TCP/IP、VLAN、DHCP / DNS 排障、VPN、防火墙与 nftables 策略路由、多网段与子网规划、无线热点网关、办公网络接入与线路维护、连接异常定位}
-\skillrow{服务 / 虚拟化}{LNMP（Nginx / MySQL / PHP）站点环境、Docker 与 docker-compose 服务编排、KVM / QEMU / crosvm 虚拟化、\mbox{OpenWrt} / \mbox{Armbian} 系统构建与镜像打包、Kubernetes（kubeadm 学习环境）}
+\skillrow{服务 / 虚拟化}{LNMP（Nginx / MySQL / PHP）站点环境与 WordPress / WooCommerce / Piwigo 应用部署维护、Docker 与 docker-compose 服务编排、KVM / QEMU / crosvm 虚拟化、\mbox{OpenWrt} / \mbox{Armbian} 系统构建与镜像打包、Kubernetes（kubeadm 学习环境）}
 \skillrow{自动化 / 脚本}{Shell / Python 编写巡检、健康检查、日志采集与异常恢复脚本；PXE / Cobbler / Ansible 批量装机与节点配置}
 \skillrow{监控 / 日志}{服务与设备运行状态巡检、日志采集与轮转、异常自动发现与通知、故障记录与统计}
-\skillrow{备份 / 恢复}{MySQL 与站点数据（wp-content）备份、升级前快照与回滚点、换机搬迁与域名解析切换、跨环境重建后的数据恢复}
+\skillrow{备份 / 恢复}{MySQL 数据库与图库 / 站点资源备份（单次约 42 GB）、升级前快照与回滚点、换机搬迁与域名解析切换、跨环境重建后的数据恢复}
 \skillrow{权限 / 安全}{多用户账号与口令、角色权限与最小权限收敛、IP 白名单、反向代理与 HTTPS、对外端口收敛、WAF 防护规则配置；AD / GPO 与 Entra ID 基础配置；Linux 权限 / IAM-RBAC}
 \skillrow{信创适配}{中标麒麟（NeoKylin）、统信 UOS、深度（Deepin）系统的安装与使用、软件源与依赖配置、应用部署与兼容性排查；系统双分区（A/B）启动与 ostree 原子更新、Virtual A/B 快照分区机制}
 \skillrow{文档 / 协作}{运维技术文档与 FAQ（\mbox{ImmortalWrt} user-FAQ）、故障处理步骤与运行记录、英文技术文档与 Code Review、Git}
@@ -141,9 +141,9 @@
 
 \projentry{电商站点搭建与长期维护（自有站点）}{2025 - 至今}
 \begin{bullets}
-  \item 面向 B2C 汽车配件 / 漆面业务的独立电商站点（WordPress + WooCommerce），商品 200 余件、月访问量 300 万+，部署于新加坡云主机，自有域名与解析服务
-  \item 搭建 LNMP（Nginx / MySQL / PHP）环境并完成站点上线，配置域名解析、HTTPS 与 Cloudflare 记录；对数据库（约 300 MB）与 wp-content 做备份（单次备份约 42 GB），并在升级前留存快照
-  \item 完成 3 次站点迁移与升级：更换主机时搬迁站点与数据、切换域名解析；排查访问缓慢与超时、调整缓存与性能配置；维护后台账号与角色权限、收敛对外暴露端口、配置 WAF 防护规则
+  \item 面向 B2C 汽车配件 / 漆面业务的独立站点，混搭部署 WordPress（WooCommerce 商城）与 Piwigo（图库）两套应用，商品 200 余件、月访问量 300 万+（Cloudflare 后台统计），部署于新加坡云主机，自有域名与解析服务
+  \item 搭建 LNMP（Nginx / MySQL / PHP）环境并完成两套应用的上线与长期维护，配置域名解析、HTTPS 与 Cloudflare 记录；备份覆盖图库资源与数据库（单次约 42 GB，数据库约 300 MB），并在每次升级前留存快照
+  \item 完成 2 次主机迁移与 3 次版本升级：更换主机时搬迁两套应用与数据、切换域名解析；排查访问缓慢与超时、调整缓存与性能配置；维护后台账号与角色权限、收敛对外暴露端口、配置 WAF 防护规则
 \end{bullets}
 
 \projentry{多架构 \mbox{OpenWrt} / \mbox{Armbian} 系统适配与维护}{2024.09 - 至今}
