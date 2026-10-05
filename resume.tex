@@ -98,7 +98,7 @@
 \cvsection{Skills}
 \skillrow{系统 / 终端}{Linux（Debian / Ubuntu 系、\mbox{OpenWrt}、\mbox{Armbian}）、Windows 与 Windows Server 基础运维；系统安装配置、驱动与常用软件部署、软硬件故障定位}
 \skillrow{网络}{TCP/IP、VLAN、DHCP / DNS 排障、VPN、防火墙与 nftables 策略路由、多网段与子网规划、无线热点网关、办公网络接入与线路维护、连接异常定位}
-\skillrow{服务 / 虚拟化}{LNMP（Nginx / MySQL / PHP）站点环境与 WordPress / WooCommerce / Piwigo 应用部署维护、Nginx 反向代理与多应用同域部署、S3 对象存储对接、Docker 与 docker-compose 服务编排、VMware（Workstation / ESXi）与 Proxmox VE（PVE）虚拟化平台的虚拟机部署与日常管理（创建与配置、快照、存储与网络配置、模板 / 镜像管理）、KVM / QEMU / crosvm 虚拟化、\mbox{OpenWrt} / \mbox{Armbian} 系统构建与镜像打包、OpenStack 与 Kubernetes 集群环境部署（竞赛 / 实验环境）}
+\skillrow{服务 / 虚拟化}{LNMP（Nginx / MySQL / PHP）站点环境与 WordPress / WooCommerce / Piwigo 应用部署维护、Nginx 反向代理与多应用同域部署、S3 对象存储对接、Docker 与 docker-compose 服务编排、VMware（Workstation / ESXi）与 Proxmox VE（PVE）虚拟化平台的虚拟机部署与日常管理（创建与配置、快照、存储与网络配置、模板 / 镜像管理）、KVM / QEMU / crosvm 虚拟化、\mbox{OpenWrt} / \mbox{Armbian} 系统构建与镜像打包、OpenStack 与 Kubernetes 集群环境部署（竞赛环境）}
 \skillrow{自动化 / 脚本}{Shell / Python 编写巡检、健康检查、日志采集与异常恢复脚本；PXE / Cobbler / Ansible 批量装机与节点配置}
 \skillrow{监控 / 日志}{服务与设备运行状态巡检、日志采集与轮转、异常自动发现与通知、故障记录与统计}
 \skillrow{备份 / 恢复}{MySQL 数据库与图库资源（含 S3 对象存储）备份、单次备份约 42 GB、升级前快照与回滚点、换机搬迁与域名解析切换、跨环境重建后的数据恢复}
@@ -114,7 +114,7 @@
 \begin{bullets}
   \item 负责 49 人规模办公环境的桌面与网络运维：终端软硬件（整机、显示器、打印机、扫描仪）安装配置与故障处理，11 台打印机与 2 台服务器的日常维护
   \item 维护办公网络：5 个网段、11 条线路、24 台 AP 与 4 台交换机的接入与线路维护，配置 VLAN / VPN / 防火墙策略
-  \item 用 VMware / Proxmox VE 搭建并维护 Linux / Windows 测试虚拟机，用于系统与软件部署验证和故障复现
+  \item 用 VMware / Proxmox VE 搭建并维护 Linux / Windows 虚拟机，用于系统与软件部署验证和故障复现
   \item 排查终端无法联网、跨境访问与服务连接异常，按终端 → 网络 → 服务端顺序定位问题，故障平均处理时长约 30 分钟
   \item 独立搭建并运维 AI 数字人直播系统（单路并发）：用 Docker / docker-compose 管理服务依赖、启动顺序与重启策略，通过 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品 / 话术资料库并完成 LoRA 促单话术适配
   \item 对比不同模型与量化版本的表现与调用开销，据此确定上线配置；完成连续 6 小时运行验证，端到端交互约 17 秒
@@ -126,7 +126,7 @@
 \jobentry{PLCT（中国科学院软件研究所）}{北京}{Linux 系统移植与内核调试（实习）}{2024.09 - 2025.05}
 \begin{bullets}
   \item 维护 Siflower、MediaTek ARM、Airoha 等平台的 \mbox{OpenWrt} / \mbox{Armbian} 构建（平均每两天一次镜像构建与验证），配置交叉编译工具链、内核、Device Tree 与系统镜像打包流程
-  \item 使用 QEMU / GDB、串口输出与内核日志定位启动失败、内存管理与驱动异常，完成修改后的实机或模拟环境验证
+  \item 使用 QEMU / GDB、串口输出与内核日志定位启动失败、内存管理与驱动异常，完成修改后的实机与 QEMU 环境验证
   \item 参与 Siflower sf21 / sf19a2890 内核由 6.12 升级至 6.18，分析 DPNS 以太网驱动与 DMA / NPI 子系统相关修复
   \item 3 个内核补丁合入 \mbox{OpenWrt} 上游；参与英文 Code Review，维护 \mbox{ImmortalWrt} user-FAQ 文档
 \end{bullets}
@@ -151,7 +151,7 @@
 \projentry{多架构 \mbox{OpenWrt} / \mbox{Armbian} 系统适配与维护}{2024.09 - 至今}
 \begin{bullets}
   \item 覆盖 TH1520、SG2000、JH7110、MT798x、Siflower 等 SoC 及 RISC-V64 / ARM64 / MIPS / x86 平台，包含系统配置、交叉编译、内核配置、Device\nobreakspace{}Tree 编译与镜像打包全流程
-  \item 跟踪上游内核与驱动变更，使用 QEMU / GDB、串口输出与系统日志复现并定位启动、内存管理与驱动问题，完成修改后的实机或模拟环境验证
+  \item 跟踪上游内核与驱动变更，使用 QEMU / GDB、串口输出与系统日志复现并定位启动、内存管理与驱动问题，完成修改后的实机与 QEMU 环境验证
 \end{bullets}
 
 \projentry{国产系统双分区启动机制（全国大学生计算机系统能力大赛 · 操作系统设计赛）}{本科期间}
