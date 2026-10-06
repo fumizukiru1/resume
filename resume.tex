@@ -98,7 +98,7 @@
 \cvsection{Skills}
 \skillrow{系统 / 终端}{Linux（多种主流发行版）、Windows 与 Windows Server 基础运维；系统安装配置、故障定位与性能排查}
 \skillrow{网络}{TCP/IP、VLAN、DHCP / DNS 排障、VPN、防火墙与 nftables 策略路由、多网段与子网规划、无线热点网关、办公网络接入与线路维护、连接异常定位}
-\skillrow{服务 / 虚拟化}{LNMP（Nginx / MySQL / PHP）站点环境与 WordPress / WooCommerce / Piwigo 应用部署维护、Nginx 反向代理与多应用同域部署、S3 对象存储对接、Docker 与 docker-compose 服务编排、VMware（Workstation / ESXi）与 Proxmox VE（PVE）虚拟化平台的虚拟机部署与日常管理（创建与配置、快照、存储与网络配置、模板 / 镜像管理）、KVM / QEMU 虚拟化（虚拟机部署与维护、模板与快照、存储与网络配置）、嵌入式 Linux 系统构建与镜像打包、OpenStack 与 Kubernetes 集群环境部署（竞赛环境）}
+\skillrow{服务 / 虚拟化}{LNMP（Nginx / MySQL / PHP）站点环境与 WordPress / WooCommerce / Piwigo 应用部署维护、Nginx 反向代理与多应用同域部署、S3 对象存储对接、Docker 与 docker-compose 服务编排、VMware（Workstation / ESXi）、Proxmox VE（PVE）与 KVM / QEMU 虚拟机部署与维护（模板与克隆、快照回滚、存储与网络配置）、嵌入式 Linux 系统构建与镜像打包、OpenStack 与 Kubernetes 集群环境部署（竞赛环境）}
 \skillrow{自动化 / 脚本}{Shell / Python 编写巡检、健康检查、日志采集与异常恢复脚本；Ansible 批量配置与节点管理、PXE / Cobbler 网络装机}
 \skillrow{监控 / 日志}{服务与设备运行状态巡检、Zabbix 主机与模板管理、触发器与告警规则配置、日志采集与轮转、异常自动发现与通知、故障记录与统计}
 \skillrow{备份 / 恢复}{MySQL 数据库与图库资源（含 S3 对象存储）备份、单次备份约 42 GB、升级前快照与回滚点、换机搬迁与域名解析切换、跨环境重建后的数据恢复}
@@ -114,9 +114,9 @@
 \begin{bullets}
   \item 负责 49 人规模办公环境的服务器与网络运维：2 台服务器与网络设备的日常维护，系统与网络故障处理
   \item 维护办公网络：5 个网段、11 条线路、24 台 AP 与 4 台交换机的接入与线路维护，配置 VLAN / VPN / 防火墙策略
-  \item 用 VMware / Proxmox VE 搭建并维护 Linux / Windows 虚拟机，用于系统与软件部署验证和故障复现
+  \item 用 VMware / Proxmox VE 维护 11–20 台 Linux / Windows 虚拟机：模板与克隆批量部署、快照回滚、脚本化批量管理与 PVE / vCenter 集中管理，用于部署验证与故障复现
   \item 排查终端无法联网、跨境访问与服务连接异常，按终端 → 网络 → 服务端顺序定位问题，故障平均处理时长约 30 分钟
-  \item 独立搭建并运维 AI 数字人直播系统（单路并发）：用 Docker / docker-compose 管理服务依赖、启动顺序与重启策略，通过 Ollama 部署 Qwen3.5 27B（4.151 bpw 量化），挂载商品 / 话术资料库并完成 LoRA 促单话术适配
+  \item 独立搭建并运维 AI 数字人直播系统（单路并发）：用 Docker / docker-compose 管理服务依赖、启动顺序与重启策略，通过 Ollama 部署 Qwen3.5 27B 模型服务，挂载商品 / 话术资料库并完成 LoRA 促单话术适配
   \item 对比不同模型与量化版本的表现与调用开销，据此确定上线配置；完成连续 6 小时运行验证，端到端交互约 17 秒
   \item 编写 Shell / Python 脚本处理服务启动、健康检查、日志轮转与异常重启，保留运行日志用于配置调整与问题回溯
   \item 管理两个业务平台的账号开通、权限调整、登录异常及人员变更后的权限回收；撰写运维文档，统计整理故障与处理记录
@@ -136,9 +136,9 @@
 
 \projentry{AI 陪聊（角色扮演）服务私有部署与长期运维（自建）}{2025 - 至今}
 \begin{bullets}
-  \item 私有部署 AI 陪聊服务：前端 SillyTavern，后端接入本地 Ollama 模型与云端模型 API 两条通道，含角色卡、世界书与对话预设内容体系，长期运行并持续维护
-  \item 对 \mbox{data} 目录（聊天记录、角色卡、世界书、配置）做备份与恢复，升级 / 迁移前先备份、出错回滚；其中一套部署在 Android 设备上 KVM / chroot 虚拟机内的 Alpine 环境，完成过跨环境重建与数据恢复
-  \item 访问控制启用多用户账号与口令、IP 白名单，服务仅监听内网并经反向代理与 HTTPS 提供；处理模型切换、上下文长度、响应变慢与连接中断等服务侧问题
+  \item 私有部署 AI 陪聊服务（前端 SillyTavern）：配置本地 Ollama 与云端 API 双通道的模型路由分流，长期运行并持续维护
+  \item 用脚本实现服务部署与版本回滚自动化：升级 / 迁移前自动备份 \mbox{data} 目录（聊天记录、角色卡、世界书、配置），异常时一键回滚，并完成过跨环境重建与数据恢复
+  \item 访问控制启用多用户账号与口令、IP 白名单，服务仅监听内网并经反向代理与 HTTPS 提供；处理模型切换、上下文长度与连接中断等问题
 \end{bullets}
 
 \projentry{电商站点搭建与长期运维（外包承接项目）}{2025 - 至今}
