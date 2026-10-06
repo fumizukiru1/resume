@@ -82,113 +82,79 @@
 % ================= 抬头 =================
 \begin{center}
   {\bfseries\fontsize{25}{28}\selectfont 朱宇杰}\\[3pt]
-  {\color{accent}\bfseries\fontsize{11}{13}\selectfont 运维工程师 \quad·\quad Linux 系统 / 网络与服务运维}\\[5pt]
-  {\itshape\color{muted}\small “系统稳定靠的是可解释的变更，而不是运气。”}\\[4pt]
+  {\color{accent}\bfseries\fontsize{11}{13}\selectfont 运维工程师 \quad·\quad Linux 系统 / 云主机与服务运维}\\[4pt]
   {\color{muted}\small 上海（现居）\quad·\quad (+86) 155-2385-6350\quad·\quad init233@outlook.com\quad·\quad github.com/libiunc}
 \end{center}
-\vspace{-2pt}
+\vspace{-1pt}
 
-% ================= Summary =================
-\cvsection{Summary}
-{\small
-1 年 Linux 系统与网络运维经验，另有一段 Linux 系统移植与内核调试实习。日常服务 49 人规模办公环境，维护 5 个网段、11 条线路、24 台 AP、4 台交换机与 2 台服务器；用 Zabbix 监控与 Shell / Python 脚本做巡检、健康检查、日志采集与异常恢复，配置 VLAN / VPN / 防火墙策略与多网段规划，按终端 → 网络 → 服务端顺序定位故障，故障平均处理时长约 30 分钟。负责云主机上 LNMP 站点的长期运维（日均访客 500–900 人、月请求量 300 万+）与本地 AI 服务的环境搭建与长期运维，覆盖数据库与站点数据备份、升级前快照、换机搬迁与跨环境恢复；熟悉账号权限管理、访问面收敛与 WAF（Cloudflare）防护配置。熟悉多种主流 Linux 发行版，并有 openEuler、中标麒麟（NeoKylin）、统信 UOS、深度（Deepin）等国产操作系统的部署与配置经验，并在全国大学生计算机系统能力大赛操作系统设计赛中实现过系统双分区启动机制。持 HCIA-Datacom（华为认证）与网络与信息安全管理员（三级 / 高级工）。\par
-}
+{\small 累计约 2 年 Linux 系统与网络运维（含 9 个月内核 / 系统移植实习）；独立维护 49 人办公环境网络与生产站点，自建阿里云云原生运维平台，并长期维护两个线上项目。\par}
 
-% ================= Skills =================
-\cvsection{Skills}
-\skillrow{系统 / 终端}{Linux（多种主流发行版）、Windows 与 Windows Server 基础运维；系统安装配置、故障定位与性能排查}
-\skillrow{网络}{TCP/IP、VLAN、DHCP / DNS 排障、VPN、防火墙与 nftables 策略路由、多网段与子网规划、无线热点网关、办公网络接入与线路维护、连接异常定位}
-\skillrow{服务 / 虚拟化}{LNMP（Nginx / MySQL / PHP）站点环境与 WordPress / WooCommerce / Piwigo 应用部署维护、Nginx 反向代理与多应用同域部署、S3 对象存储对接、Docker 与 docker-compose 服务编排、VMware（Workstation / ESXi）、Proxmox VE（PVE）与 KVM / QEMU 虚拟机部署与维护（模板与克隆、快照回滚、存储与网络配置）、嵌入式 Linux 系统构建与镜像打包、OpenStack 与 Kubernetes 集群环境部署（竞赛环境）}
-\skillrow{自动化 / 脚本}{Shell / Python 编写巡检、健康检查、日志采集与异常恢复脚本；Ansible 批量配置与节点管理、PXE / Cobbler 网络装机}
-\skillrow{监控 / 日志}{服务与设备运行状态巡检、Zabbix 主机与模板管理、触发器与告警规则配置、日志采集与轮转、异常自动发现与通知、故障记录与统计}
-\skillrow{备份 / 恢复}{MySQL 数据库与图库资源（含 S3 对象存储）备份、单次备份约 42 GB、升级前快照与回滚点、换机搬迁与域名解析切换、跨环境重建后的数据恢复}
-\skillrow{权限 / 安全}{多用户账号与口令、角色权限与最小权限收敛、IP 白名单、反向代理与 HTTPS、对外端口收敛、WAF 防护配置与规则调优（Cloudflare）；AD / GPO 与 Entra ID 基础配置；Linux 权限 / IAM-RBAC}
-\skillrow{信创适配}{openEuler、中标麒麟（NeoKylin）、统信 UOS、深度（Deepin）系统的安装与使用、软件源与依赖配置、应用部署与兼容性排查；系统双分区（A/B）启动与 ostree 原子更新、Virtual A/B 快照分区机制}
-\skillrow{文档 / 协作}{运维技术文档与 FAQ（某知名开源软件项目的 user-FAQ 文档）、故障处理步骤与运行记录、英文技术文档与 Code Review、Git}
-\skillrow{认证}{HCIA-Datacom（华为认证 · 数据通信，有效至 2027.01）；网络与信息安全管理员（三级 / 高级工）；CET-4（433）}
+% ================= 核心能力 =================
+\cvsection{核心能力}
+\skillrow{系统 / 虚拟化}{Linux（CentOS / RHEL / Ubuntu / Debian / Alpine）、Windows Server；KVM 虚拟化（Proxmox VE）、VMware ESXi；OpenStack 与 Kubernetes（k3s）集群部署；Docker / docker-compose}
+\skillrow{网络}{TCP/IP、VLAN、DHCP / DNS、VPN、nftables 防火墙策略、多网段与子网规划、tcpdump 抓包与连接异常定位、Cloudflare WAF 规则调优；HCIA-Datacom}
+\skillrow{云 / 自动化}{阿里云（ECS / VPC / vSwitch / 安全组 / 对象存储）日常运维；Ansible（playbook / role 幂等批量、inventory 分组）、Shell / Python 自动化脚本；CI/CD：Gitea + Jenkins（docker-compose）}
+\skillrow{监控 / 备份}{Zabbix 监控体系（主机与模板、触发器与告警规则、告警通知）；定时备份 + 变更前快照 + 跨环境重建恢复}
+\skillrow{信创适配}{openEuler / 中标麒麟 / 统信 UOS / Deepin 部署与兼容排查；A/B 双分区 + ostree 原子更新、Virtual A/B 快照回退}
 
-% ================= Work Experience =================
-\cvsection{Work Experience}
+% ================= 工作经历 =================
+\cvsection{工作经历}
 
-\jobentry{苏珊贝尔}{辽宁}{网络与服务器运维、Linux 系统与 AI 服务支持}{2025.06 - 2026.07}
+\jobentry{苏珊贝尔}{辽宁}{运维工程师}{2025.06 - 2026.07}
 \begin{bullets}
-  \item 负责 49 人规模办公环境的服务器与网络运维：2 台服务器与网络设备的日常维护，系统与网络故障处理
-  \item 维护办公网络：5 个网段、11 条线路、24 台 AP 与 4 台交换机的接入与线路维护，配置 VLAN / VPN / 防火墙策略
-  \item 用 VMware / Proxmox VE 维护 11–20 台 Linux / Windows 虚拟机：模板与克隆批量部署、快照回滚、脚本化批量管理与 PVE / vCenter 集中管理，用于部署验证与故障复现
-  \item 排查终端无法联网、跨境访问与服务连接异常，按终端 → 网络 → 服务端顺序定位问题，故障平均处理时长约 30 分钟
-  \item 独立搭建并运维 AI 数字人直播系统（单路并发）：用 Docker / docker-compose 管理服务依赖、启动顺序与重启策略，通过 Ollama 部署 Qwen3.5 27B 模型服务，挂载商品 / 话术资料库并完成 LoRA 促单话术适配
-  \item 对比不同模型与推理配置的表现与调用开销，据此确定上线配置；完成连续 6 小时运行验证，端到端交互约 17 秒
-  \item 编写 Shell / Python 脚本处理服务启动、健康检查、日志轮转与异常重启，保留运行日志用于配置调整与问题回溯
-  \item 管理两个业务平台的账号开通、权限调整、登录异常及人员变更后的权限回收；撰写运维文档，统计整理故障与处理记录
-  \item 配置站点 WAF 防护（Cloudflare）：自定义拦截规则、SQL 注入与 XSS 规则集、CC 与频率限制、IP 封禁与地区限制、人机校验
+  \item 独立负责 49 人办公环境的服务器与网络运维：2 台服务器与网络设备日常维护；维护 5 个网段、11 条线路、24 台 AP 与 4 台交换机，配置 VLAN / VPN / 防火墙策略
+  \item 用 KVM（Proxmox VE）/ VMware 维护 11–20 台 Linux / Windows 虚拟机：模板与克隆批量部署、快照回滚、脚本化批量管理与集中管理，用于部署验证与故障复现
+  \item 排查终端无法联网、跨境访问与服务连接异常，用 tcpdump 抓包按终端 → 网络 → 服务端逐层定位，故障处理时长中位数约 30 分钟
+  \item 编写 Shell / Python 脚本处理服务启动、健康检查、日志轮转与异常重启；Zabbix 主机与模板管理、触发器与告警规则配置
+  \item 配置站点 WAF 防护（Cloudflare）：自定义拦截规则、SQL 注入与 XSS 规则集、CC 与频率限制、IP 封禁与地区限制
 \end{bullets}
 
 \jobentry{PLCT（中国科学院软件研究所）}{北京}{Linux 系统移植与内核调试（实习）}{2024.09 - 2025.05}
 \begin{bullets}
-  \item 维护多个嵌入式平台的系统构建与镜像打包（平均每两天一次镜像构建与验证），配置交叉编译工具链、内核、Device Tree 与系统镜像打包流程
-  \item 使用 QEMU / GDB、串口输出与内核日志定位启动失败、内存管理与驱动异常，完成修改后的实机与 QEMU 环境验证
-  \item 参与 Siflower sf21 / sf19a2890 内核由 6.12 升级至 6.18，分析 DPNS 以太网驱动与 DMA / NPI 子系统相关修复
-  \item 3 个内核补丁合入上游；参与英文 Code Review，维护某知名开源软件项目的 user-FAQ 文档
+  \item 维护多个嵌入式平台的系统构建与镜像打包（平均每两天一次构建与验证），配置交叉编译工具链、内核、Device\allowbreak{}Tree 与镜像打包流程
+  \item 参与 Siflower sf19a2890 内核由 6.12 升级至 6.18，为 DPNS 以太网驱动与 DMA / NPI 子系统提交 3 个修复合入上游；用 QEMU / GDB、串口输出与内核日志定位启动、内存与驱动异常
+  \item 参与英文 Code Review，维护开源项目的 user-FAQ 文档
 \end{bullets}
 
-% ================= Projects =================
-\cvsection{Projects}
+% ================= 项目经历 =================
+\cvsection{项目经历}
 
-\projentry{AI 服务私有化部署与长期运维}{2025 - 至今}
+\projentry{阿里云云原生运维平台（个人项目）}{2026.07 - 至今}
 \begin{bullets}
-  \item 私有化部署 AI 对话服务：配置本地 Ollama 与云端 API 双通道的模型路由分流，按场景切换后端并长期稳定运行
-  \item 用脚本实现部署与版本回滚自动化：变更前自动备份服务数据目录，异常时一键回滚；完成过跨环境重建与数据恢复
-  \item 启用多用户账号与口令、IP 白名单等访问控制，服务仅监听内网并经反向代理与 HTTPS 提供；处理模型切换、上下文长度与连接中断等服务侧问题
+  \item 在阿里云 3 台 ECS（Debian 13）上用 Ansible 完成节点批量初始化：6 个 role 覆盖系统基线、内核参数（br\_netfilter / ip\_forward）、时区、普通用户与 sudoers 校验、Docker 与国内镜像源、安全加固；支持 --check 预演与 --tags 分段执行
+  \item 安全加固：nftables 用独立 inet filter 表只管 INPUT、不 flush 其他表（避免打断 Docker / k3s 自身的规则链），模板下发前以 nft -c -f 校验；禁用 root SSH 登录；卸载云盾与云监控 agent（保留云助手）
+  \item 用 docker-compose 部署 Gitea + Jenkins CI：管理端口只绑 127.0.0.1、经 SSH 隧道访问；Jenkins 以非 root 用户运行，通过 group\_add 传入 docker.sock 的 GID，容器内只装 Docker CLI 不跑 daemon
+  \item 排障：playbook 加固后 SSH 对所有用户拒连（kex\_exchange\_identification），定位为 fail2ban 因反复以 root 连接触发封禁、封掉了自己的出口 IP，经控制台 VNC 恢复；Ansible 动态 inventory 认证失败，读调用栈定位到插件只认环境变量 AK/SK，权衡后回退静态 inventory
+  \item 后续阶段（进行中）：k3s 双节点 + Helm、ArgoCD GitOps、S3 兼容对象存储与备份、Prometheus / Grafana、ELK 日志
 \end{bullets}
 
-\projentry{B2C 电商站点环境搭建与长期运维}{2025 - 至今}
+\projentry{B2C 电商站点环境搭建与长期运维（阿里云 ECS · 新加坡）}{2025 - 至今}
 \begin{bullets}
-  \item 面向 B2C 汽车配件 / 漆面业务的电商站点：同域名反代部署 WordPress（WooCommerce 商城）与 Piwigo（图库）两套应用，图库资源托管于 S3 对象存储；商品 200 余件、日均访客 500–900 人、月请求量 300 万+（Cloudflare 统计），站点运行于新加坡云主机
-  \item 维护 LNMP（Nginx / MySQL / PHP）生产环境与两套应用的上线：反向代理、HTTPS、CDN 与 WAF 规则配置；备份覆盖数据库与图库资源（单次约 42 GB，数据库约 300 MB），变更前留存快照与回滚点
-  \item 完成 2 次主机迁移与 3 次版本升级：迁移应用与数据、切换解析并验证；排查访问缓慢与超时并调整缓存与性能配置；收敛对外暴露端口、维护后台账号与角色权限、配置 WAF 防护规则
+  \item 同域名反代部署 WordPress（WooCommerce 商城）与 Piwigo（图库）两套应用，图库资源托管于对象存储（S3 兼容）；商品 200 余件、日均访客 500–900 人
+  \item 维护 LNMP（Nginx / MySQL / PHP）生产环境：反向代理、HTTPS、CDN 与 WAF 规则配置；备份覆盖数据库与图库资源（单次约 42 GB，数据库约 300 MB），变更前留存快照与回滚点
+  \item 完成 2 次主机迁移与 3 次版本升级：迁移应用与数据、切换解析并验证；收敛对外暴露端口、维护后台账号与角色权限
 \end{bullets}
 
-\projentry{多架构 Linux 系统适配与内核维护}{2024.09 - 至今}
-\begin{bullets}
-  \item 覆盖 TH1520、SG2000、JH7110、MT798x、Siflower 等 SoC 及 RISC-V64 / ARM64 / MIPS / x86 平台，包含系统配置、交叉编译、内核配置、Device\nobreakspace{}Tree 编译与镜像打包全流程
-  \item 跟踪上游内核与驱动变更，使用 QEMU / GDB、串口输出与系统日志复现并定位启动、内存管理与驱动问题，完成修改后的实机与 QEMU 环境验证
-\end{bullets}
-
-\projentry{国产系统双分区启动机制（全国大学生计算机系统能力大赛 · 操作系统设计赛）}{本科期间}
-\begin{bullets}
-  \item 在中标麒麟 / 统信 UOS / 深度（Deepin）环境下围绕系统启动与升级机制完成赛题，实现系统双分区（A/B）启动
-  \item 采用 ostree 原子更新部署与 Virtual A/B 快照分区机制完成系统升级与回退，升级失败可回到原分区启动
-\end{bullets}
-
-\projentry{RISC-V 平台智能家居 AI 助手（毕业设计）}{2025.09 - 2026.06}
-\begin{bullets}
-  \item 在 RISC-V Linux 设备上整合语音交互、多轮对话与智能家居设备控制，全部组件运行于本地硬件
-  \item 在 RTX 3080 Laptop（16GB 显存）用 Ollama 部署 DeepSeek-R1-Distill-Qwen-14B 作为对话后端，整合 SillyTavern、GPT-SoVITS 与 Home Assistant；用 Docker 管理服务运行依赖，配置组件网络通信、启动脚本与基础安全设置
-\end{bullets}
-
-% ================= Certificates =================
-\cvsection{Certificates \& Awards}
+% ================= 证书 / 获奖 =================
+\cvsection{证书 / 获奖}
 
 \noindent
 \begin{minipage}[t]{2.45cm}\bfseries\small 专业证书\end{minipage}%
 \begin{minipage}[t]{\dimexpr\linewidth-2.45cm\relax}\small
-HCIA-Datacom（华为认证 · 数据通信，有效期至 2027.01）\\
-网络与信息安全管理员（三级 / 高级工）\\
-CET-4（433 分）
+HCIA-Datacom（华为认证 · 数据通信，对标 CCNA 级别）\\
+网络与信息安全管理员（三级 / 高级工）
 \end{minipage}
 \par\vspace{2pt}
 
 \noindent
 \begin{minipage}[t]{2.45cm}\bfseries\small 获奖\end{minipage}%
 \begin{minipage}[t]{\dimexpr\linewidth-2.45cm\relax}\small
-辽宁省第二届职业技能大赛（云计算）铜牌 —— 赛项覆盖 OpenStack、Docker 与 Kubernetes 的环境部署与运维\\
-全国大学生计算机系统能力大赛（操作系统设计赛）鼓励奖 —— 本科期间\\
-计算机棋类博弈锦标赛国家级二等奖（2 次，队长 / 唯一开发者）；省级二等奖 / 三等奖\\
-第十三届蓝桥杯 C/C++ 大学 B 组省级三等奖
+辽宁省第二届职业技能大赛（云计算）铜牌 —— 赛项覆盖 OpenStack、Docker 与 Kubernetes 环境部署与运维\\
+全国大学生计算机系统能力大赛（操作系统设计赛）鼓励奖 —— 国产系统 A/B 双分区启动与 ostree 原子更新
 \end{minipage}
 
-% ================= Education =================
-\cvsection{Education}
+% ================= 教育 =================
+\cvsection{教育}
 
 \jobentry{大连理工大学城市学院}{辽宁省大连市}{工学本科 · 计算机科学与技术（大数据方向）}{2021 - 2025}
 
