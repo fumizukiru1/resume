@@ -93,7 +93,7 @@
 \cvsection{核心能力}
 \skillrow{系统 / 虚拟化}{Linux（CentOS / RHEL / Ubuntu / Debian / Alpine）、Windows Server；KVM 虚拟化（Proxmox VE）、VMware ESXi；OpenStack 与 Kubernetes（k3s）集群部署；Docker / docker-compose}
 \skillrow{网络}{TCP/IP、VLAN、DHCP / DNS、VPN、nftables 防火墙策略、多网段与子网规划、tcpdump 抓包与连接异常定位、Cloudflare WAF 规则调优；HCIA-Datacom}
-\skillrow{云 / 自动化}{阿里云（ECS / VPC / vSwitch / 安全组 / 对象存储）日常运维；Ansible（playbook / role 幂等批量、inventory 分组）、Shell / Python 自动化脚本；CI/CD：Gitea + Jenkins（docker-compose）}
+\skillrow{云 / 自动化}{阿里云（ECS / VPC / vSwitch / 安全组 / 对象存储）与 AWS（Lightsail 实例、静态 IP / IPv6、快照）日常运维；Cloudflare DNS 与 WAF 规则 API 自动化；Ansible（playbook / role 幂等批量、inventory 分组）、Shell / Python 自动化脚本；CI/CD：Gitea + Jenkins（docker-compose）}
 \skillrow{监控 / 备份}{Zabbix 监控体系（主机与模板、触发器与告警规则、告警通知）；定时备份 + 变更前快照 + 跨环境重建恢复}
 \skillrow{信创适配}{openEuler / 中标麒麟 / 统信 UOS / Deepin 部署与兼容排查；A/B 双分区 + ostree 原子更新、Virtual A/B 快照回退}
 
@@ -126,6 +126,13 @@
   \item 用 docker-compose 部署 Gitea + Jenkins CI：管理端口只绑 127.0.0.1、经 SSH 隧道访问；Jenkins 以非 root 用户运行，通过 group\_add 传入 docker.sock 的 GID，容器内只装 Docker CLI 不跑 daemon
   \item 排障：playbook 加固后 SSH 对所有用户拒连（kex\_exchange\_identification），定位为 fail2ban 因反复以 root 连接触发封禁、封掉了自己的出口 IP，经控制台 VNC 恢复；Ansible 动态 inventory 认证失败，读调用栈定位到插件只认环境变量 AK/SK，权衡后回退静态 inventory
   \item 后续阶段（进行中）：k3s 双节点 + Helm、ArgoCD GitOps、S3 兼容对象存储与备份、Prometheus / Grafana、ELK 日志
+\end{bullets}
+
+\projentry{AWS 云资源与 DNS 自动化（Lightsail + Cloudflare API）}{2026.08 - 至今}
+\begin{bullets}
+  \item 用 boto3 封装 Lightsail 静态 IP 轮换：先申请并绑定新静态 IP、确认公网可用后再释放旧 IP，避免流程中断导致实例失去公网入口
+  \item 通过 update-instance 关闭再开启 IPv6 获取新地址，并校验新旧地址已变化；再调用 Cloudflare DNS API 同步更新 A / AAAA 记录（proxied=false），以 dig 验证解析生效，替代手工改解析
+  \item 权限按最小化收敛：不用根账号 Access Key，登记脚本所需 Lightsail 权限（GetInstance / Allocate / Attach / Detach / Release Static IP、UpdateInstance）；实例侧同步核对 sysctl、sshd 与防火墙监听是否覆盖新 IPv6 地址
 \end{bullets}
 
 \projentry{B2C 电商站点环境搭建与长期运维（阿里云 ECS · 新加坡）}{2025 - 至今}
