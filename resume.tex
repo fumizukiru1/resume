@@ -104,7 +104,7 @@
 \begin{bullets}
   \item 负责网络区域的网络运维与复杂网络策略配置：VLAN 划分与隔离、VPN 接入、防火墙策略与多网段路由规划
   \item 用 KVM（Proxmox VE）/ VMware 维护多台 Linux / Windows 虚拟机：模板与克隆、cloud-init + Ansible playbook 快速部署、快照回滚与集中管理，用于部署验证与故障复现
-  \item 排查跨境访问与业务服务连接异常，用 tcpdump 抓包按网络 → 服务端逐层定位，故障处理时长中位数约 30 分钟
+  \item 业务服务网络异常排查：组合使用 tcpdump 抓包、curl / dig 连通性与解析验证等手段，按网络 → 服务端逐层定位跨境访问与业务连接异常
   \item 编写 Shell / Python 脚本处理服务启动、健康检查、日志轮转与异常重启；Zabbix 主机与模板管理、触发器与告警规则配置
   \item 配置站点 WAF 防护（Cloudflare）：自定义拦截规则、SQL 注入与 XSS 规则集、CC 与频率限制、IP 封禁与地区限制
 \end{bullets}
@@ -121,7 +121,7 @@
 
 \projentry{阿里云云原生运维平台（个人项目）}{2026.07 - 至今}
 \begin{bullets}
-  \item 在阿里云 3 台 ECS（Debian 13）上用 Ansible 完成节点批量初始化：6 个 role 覆盖系统基线、内核参数（br\_netfilter / ip\_forward）、时区、普通用户与 sudoers 校验、Docker 与国内镜像源、安全加固；支持 --check 预演与 --tags 分段执行
+  \item 在阿里云多台 ECS（Debian 13）上用 Ansible 完成节点批量初始化：6 个 role 覆盖系统基线、内核参数（br\_netfilter / ip\_forward）、时区、普通用户与 sudoers 校验、Docker 与国内镜像源、安全加固；支持 --check 预演与 --tags 分段执行
   \item 安全加固：nftables 用独立 inet filter 表只管 INPUT、不 flush 其他表（避免打断 Docker / Kubernetes 自身的规则链），模板下发前以 nft -c -f 校验；禁用 root SSH 登录；卸载云盾与云监控 agent（保留云助手）
   \item 用 docker-compose 部署 Gitea + Jenkins CI：管理端口只绑 127.0.0.1、经 SSH 隧道访问；Jenkins 以非 root 用户运行，通过 group\_add 传入 docker.sock 的 GID，容器内只装 Docker CLI 不跑 daemon
   \item 交付链路：Ansible 完成节点初始化 → Gitea 托管代码 → Jenkins 构建镜像 → 部署到 Kubernetes 集群，打通从代码提交到集群上线的链路
