@@ -1,5 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
+% resume version: v3.2（系统方向运维版）
 % 版式仿「李典铮-运维工程师」：居中姓名 + 红色小节标题通栏横线 + 公司/职位/日期三行式
 % + 紧凑单行 bullet + 技能块「加粗组名 + 内容」双栏。单文件，不再 include sections/。
 
@@ -91,10 +92,10 @@
 
 % ================= 核心能力 =================
 \cvsection{核心能力}
-\skillrow{系统 / 虚拟化}{主流 Linux 发行版与 Windows Server；KVM 虚拟化（Proxmox VE）、VMware ESXi；OpenStack 与 Kubernetes 集群部署与运维；Docker / docker-compose}
+\skillrow{系统 / 虚拟化}{主流 Linux 发行版与 Windows Server；KVM 虚拟化（Proxmox VE）、VMware ESXi；OpenStack 与 Kubernetes 集群部署与运维（kubeadm / Helm）；containerd / Docker 容器运行时}
 \skillrow{网络}{TCP/IP、VLAN、DHCP / DNS、VPN、nftables 防火墙策略、多网段与子网规划、tcpdump 抓包与连接异常定位、Cloudflare WAF 规则调优；HCIA-Datacom}
 \skillrow{云 / 自动化}{阿里云（ECS / VPC / vSwitch / 安全组 / 对象存储）与 AWS（EC2 / Lightsail 实例、S3 对象存储、静态 IP 与 IPv6、实例快照）日常运维；Cloudflare DNS 与 WAF 规则 API 自动化；Ansible（playbook / role 幂等批量、inventory 分组）、Shell / Python 自动化脚本；CI/CD：Gitea + Jenkins 容器化部署，构建镜像并交付到 Kubernetes 集群}
-\skillrow{监控 / 备份}{Zabbix 监控体系（主机与模板、触发器与告警规则、告警通知）；定时备份 + 变更前快照 + 跨环境重建恢复}
+\skillrow{监控 / 备份}{Zabbix 监控体系（主机与模板、触发器与告警规则、告警通知）；自动定时备份 + 变更前自动快照 + 一键回滚 / 跨环境重建恢复}
 \skillrow{信创适配}{国产操作系统部署与兼容排查；A/B 双分区 + ostree 原子更新、Virtual A/B 快照回退}
 
 % ================= 工作经历 =================
@@ -123,7 +124,7 @@
 \begin{bullets}
   \item 在阿里云多台 ECS（Debian 13）上用 Ansible 完成节点批量初始化：6 个 role 覆盖系统基线、内核参数（br\_netfilter / ip\_forward）、时区、普通用户与 sudoers 校验、Docker 与国内镜像源、安全加固；支持 --check 预演与 --tags 分段执行
   \item 安全加固：nftables 用独立 inet filter 表只管 INPUT、不 flush 其他表（避免打断 Docker / Kubernetes 自身的规则链），模板下发前以 nft -c -f 校验；禁用 root SSH 登录；卸载云盾与云监控 agent（保留云助手）
-  \item 用 docker-compose 部署 Gitea + Jenkins CI：管理端口只绑 127.0.0.1、经 SSH 隧道访问；Jenkins 以非 root 用户运行，通过 group\_add 传入 docker.sock 的 GID，容器内只装 Docker CLI 不跑 daemon
+  \item 容器化部署 Gitea + Jenkins CI：管理端口只绑 127.0.0.1、经 SSH 隧道访问；Jenkins 以非 root 用户运行，通过 group\_add 传入 docker.sock 的 GID，容器内只装 Docker CLI 不跑 daemon
   \item 交付链路：Ansible 完成节点初始化 → Gitea 托管代码 → Jenkins 构建镜像 → 部署到 Kubernetes 集群，打通从代码提交到集群上线的链路
   \item 排障：playbook 加固后 SSH 对所有用户拒连（kex\_exchange\_identification），定位为 fail2ban 因反复以 root 连接触发封禁、封掉了自己的出口 IP，经控制台 VNC 恢复；Ansible 动态 inventory 认证失败，读调用栈定位到插件只认环境变量 AK/SK，权衡后回退静态 inventory
   \item 后续阶段（进行中）：Kubernetes 双节点 + Helm、ArgoCD GitOps、S3 兼容对象存储与备份、Prometheus / Grafana、ELK 日志
@@ -139,7 +140,7 @@
 \projentry{B2C 电商站点环境搭建与长期运维（AWS EC2 · 新加坡）}{2025 - 至今}
 \begin{bullets}
   \item 同域名反代部署 WordPress（WooCommerce 商城）与 Piwigo（图库）两套应用，图库资源托管于 AWS S3（对象存储）；商品 200 余件、日均访客 500–900 人
-  \item 维护 LNMP（Nginx / MySQL / PHP）生产环境：反向代理、HTTPS、CDN 与 WAF 规则配置；备份覆盖数据库与图库资源（单次约 42 GB，数据库约 300 MB），变更前留存快照与回滚点
+  \item 维护 LNMP（Nginx / MySQL / PHP）生产环境：反向代理、HTTPS、CDN 与 WAF 规则配置；定时备份数据库与图库资源（单次约 42 GB，数据库约 300 MB），变更前自动留存快照与回滚点
   \item 完成 2 次主机迁移与 3 次版本升级：迁移应用与数据、切换解析并验证；收敛对外暴露端口、维护后台账号与角色权限
 \end{bullets}
 
