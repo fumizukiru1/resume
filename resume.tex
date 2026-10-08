@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% resume version: v3.10（系统方向运维版）
+% resume version: v3.11（系统方向运维版）
 % 版式仿「李典铮-运维工程师」：居中姓名 + 红色小节标题通栏横线 + 公司/职位/日期三行式
 % + 紧凑单行 bullet + 技能块「加粗组名 + 内容」双栏。单文件，不再 include sections/。
 
@@ -120,6 +120,15 @@
 % ================= 项目经历 =================
 \cvsection{项目经历}
 
+\projentry{B2C 电商站点环境搭建与长期运维（AWS EC2 · 新加坡）}{2025 - 至今}
+\begin{bullets}
+  \item 同域名反代部署 WordPress（WooCommerce 商城）与 Piwigo（图库）两套应用，图库资源托管于 AWS S3（对象存储）；商品 200 余件、日均访客 500–900 人
+  \item 维护 LNMP（Nginx / MySQL / PHP）生产环境：反向代理、HTTPS、CDN 与 WAF 规则配置；定时备份数据库与图库资源（单次约 42 GB，数据库约 300 MB），变更前自动留存快照与回滚点
+  \item 完成 2 次主机迁移与 3 次版本升级：迁移应用与数据、切换解析并验证；收敛对外暴露端口、维护后台账号与角色权限
+\end{bullets}
+
+% ================= 证书 / 获奖 =================
+
 \projentry{阿里云云原生运维平台}{2023.04 - 至今}
 \begin{bullets}
   \item 在阿里云多台 ECS（Debian 13）上用 Ansible 完成节点批量初始化：6 个 role 覆盖系统基线、内核参数（br\_netfilter / ip\_forward）、时区、普通用户与 sudoers 校验、Docker 与国内镜像源、安全加固；支持 --check 预演与 --tags 分段执行
@@ -136,14 +145,6 @@
   \item 权限按最小化收敛：不用根账号 Access Key，登记脚本所需 Lightsail 权限（GetInstance / Allocate / Attach / Detach / Release Static IP、UpdateInstance）；实例侧同步核对 sysctl、sshd 与防火墙监听是否覆盖新 IPv6 地址
 \end{bullets}
 
-\projentry{B2C 电商站点环境搭建与长期运维（AWS EC2 · 新加坡）}{2025 - 至今}
-\begin{bullets}
-  \item 同域名反代部署 WordPress（WooCommerce 商城）与 Piwigo（图库）两套应用，图库资源托管于 AWS S3（对象存储）；商品 200 余件、日均访客 500–900 人
-  \item 维护 LNMP（Nginx / MySQL / PHP）生产环境：反向代理、HTTPS、CDN 与 WAF 规则配置；定时备份数据库与图库资源（单次约 42 GB，数据库约 300 MB），变更前自动留存快照与回滚点
-  \item 完成 2 次主机迁移与 3 次版本升级：迁移应用与数据、切换解析并验证；收敛对外暴露端口、维护后台账号与角色权限
-\end{bullets}
-
-% ================= 证书 / 获奖 =================
 \cvsection{证书 / 获奖}
 
 \noindent
