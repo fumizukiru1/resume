@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% resume version: v3.10（网络工程师方向）
+% resume version: v3.11（网络工程师方向）
 % 版式仿「李典铮-运维工程师」：居中姓名 + 红色小节标题通栏横线 + 公司/职位/日期三行式
 % + 紧凑单行 bullet + 技能块「加粗组名 + 内容」双栏。单文件，不再 include sections/。
 
@@ -88,13 +88,13 @@
 \end{center}
 \vspace{-1pt}
 
-{\small 6 年云计算与 Linux 系统运维积累（2021 年入校起持续实践）：早期在竞赛与自建环境完成 OpenStack、Kubernetes 集群的部署与运维；企业侧负责服务器与网络运维、KVM 虚拟化与 Zabbix 监控；生产侧长期维护亚马逊云 AWS（EC2 / S3）上的站点，并自建阿里云云原生平台——运维 Kubernetes 集群、Ansible 批量初始化节点、Gitea + Jenkins 打通镜像与 CI/CD 交付链路；另有 9 个月内核 / 系统移植实习。\par}
+{\small 6 年云计算与 Linux 系统运维积累：2020 年起使用 AWS、2022 年起使用阿里云；早期在竞赛与自建环境完成 OpenStack、Kubernetes 集群的部署与运维；企业侧负责服务器与网络运维、KVM 虚拟化与 Zabbix 监控；生产侧长期维护亚马逊云 AWS（EC2 / S3）上的站点，并自建阿里云云原生平台——运维 Kubernetes 集群、Ansible 批量初始化节点、Gitea + Jenkins 打通镜像与 CI/CD 交付链路；另有 9 个月内核 / 系统移植实习。\par}
 
 % ================= 核心能力 =================
 \cvsection{核心能力}
 \skillrow{系统 / 虚拟化}{主流 Linux 发行版与 Windows Server；KVM 虚拟化（Proxmox VE）、VMware ESXi；OpenStack 与 Kubernetes 集群部署与运维（kubeadm / Helm）；Docker / containerd}
 \skillrow{网络}{路由器 / 交换机 / 无线 AP 配置与日常运维；TCP/IP、VLAN 划分与隔离、DHCP / DNS、VPN、nftables 防火墙策略与策略路由、多网段与子网规划；tcpdump 抓包分析与连接异常定位、网络性能与质量优化、Cloudflare WAF 规则调优；HCIA-Datacom}
-\skillrow{云 / 自动化}{阿里云（ECS / VPC / vSwitch / 安全组 / 对象存储 / RAM 用户·角色·策略与最小权限）与 AWS（EC2 / Lightsail 实例、S3 对象存储、静态 IP 与 IPv6、实例快照 / IAM 权限收敛）日常运维；Cloudflare DNS 与 WAF 规则 API 自动化；Ansible（playbook / role 幂等批量、inventory 分组）、Shell / Python 自动化脚本；CI/CD：Gitea + Jenkins 容器化部署，构建镜像并交付到 Kubernetes 集群}
+\skillrow{云 / 自动化}{AWS（2020 年起：EC2 / Lightsail、S3 对象存储、静态 IP 与 IPv6、实例快照 / IAM 权限收敛）与阿里云（2022 年起：ECS / VPC / vSwitch / 安全组 / 对象存储 / RAM 用户·角色·策略与最小权限）日常运维；Cloudflare DNS 与 WAF 规则 API 自动化；Ansible（playbook / role 幂等批量、inventory 分组）、Shell / Python 自动化脚本；CI/CD：Gitea + Jenkins 容器化部署，构建镜像并交付到 Kubernetes 集群}
 \skillrow{监控 / 备份}{Zabbix 监控体系（主机与模板、触发器与告警规则、告警通知）；自动定时备份 + 变更前自动快照 + 一键回滚 / 跨环境重建恢复}
 \skillrow{信创适配}{国产操作系统部署与兼容排查；A/B 双分区 + ostree 原子更新、Virtual A/B 快照回退}
 
@@ -129,9 +129,9 @@
   \item 完成平台化建设：Kubernetes 双节点 + Helm、ArgoCD GitOps 持续交付、S3 兼容对象存储与备份、Prometheus / Grafana 监控、ELK 日志
 \end{bullets}
 
-\projentry{AWS 云资源与 DNS 自动化（EC2 / Lightsail + Cloudflare API）}{2026.08 - 至今}
+\projentry{AWS 云资源与 DNS 自动化（EC2 / Lightsail + Cloudflare API）}{2020 - 至今}
 \begin{bullets}
-  \item 维护 AWS EC2 / Lightsail 实例（ap-southeast-1 新加坡）上的生产站点：系统与 Nginx 环境、安全组与端口收敛、S3 存储图库资源与备份；用 boto3 封装 Lightsail 静态 IP 轮换——先申请并绑定新静态 IP、确认公网可用后再释放旧 IP，避免流程中断导致实例失去公网入口
+  \item 长期维护 AWS EC2 / Lightsail 实例（ap-southeast-1 新加坡）上的生产站点：系统与 Nginx 环境、安全组与端口收敛、S3 存储图库资源与备份；用 boto3 封装 Lightsail 静态 IP 轮换——先申请并绑定新静态 IP、确认公网可用后再释放旧 IP，避免流程中断导致实例失去公网入口
   \item 通过 update-instance 关闭再开启 IPv6 获取新地址，并校验新旧地址已变化；再调用 Cloudflare DNS API 同步更新 A / AAAA 记录（proxied=false），以 dig 验证解析生效，替代手工改解析
   \item 权限按最小化收敛：不用根账号 Access Key，登记脚本所需 Lightsail 权限（GetInstance / Allocate / Attach / Detach / Release Static IP、UpdateInstance）；实例侧同步核对 sysctl、sshd 与防火墙监听是否覆盖新 IPv6 地址
 \end{bullets}
