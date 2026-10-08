@@ -58,6 +58,7 @@
 | `k8s-ops` | 云原生运维开发工程师 · Linux 系统专家 | Kubernetes / 云原生运维 |
 | `desktop-support` | 桌面运维 / IT 技术支持工程师 | 桌面运维岗（中文） |
 | `desktop-support-en` | Desktop Support / IT Support Engineer | 桌面运维岗（英文），见下方说明 |
+| `network-engineer` | 网络工程师 / 运维 · Linux 系统与网络运维 | 网络设备（路由 / 交换 / 无线 / WAF）运维、故障排错与报告方向 |
 | `mihoyo-8663` | Linux 系统构建 / 基础设施自动化工程师 | 米哈游社招投递 |
 | `ai-agent-ops` | AI Agent 运维工程师 / AI 基础设施运维 | AI Agent Ops / AI 基础设施运维方向 |
 | `full-projects` | 开源软件工程师 / Linux 系统工程师 | 两段式项目结构的试验分支，**该结构已并入 `general-full`** |
