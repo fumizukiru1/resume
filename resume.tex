@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% resume version: v3.11（网络工程师方向）
+% resume version: v3.12（网络工程师方向）
 % 版式仿「李典铮-运维工程师」：居中姓名 + 红色小节标题通栏横线 + 公司/职位/日期三行式
 % + 紧凑单行 bullet + 技能块「加粗组名 + 内容」双栏。单文件，不再 include sections/。
 
@@ -120,7 +120,7 @@
 % ================= 项目经历 =================
 \cvsection{项目经历}
 
-\projentry{阿里云云原生运维平台}{2026.07 - 至今}
+\projentry{阿里云云原生运维平台}{2023.04 - 至今}
 \begin{bullets}
   \item 在阿里云多台 ECS（Debian 13）上用 Ansible 完成节点批量初始化：6 个 role 覆盖系统基线、内核参数（br\_netfilter / ip\_forward）、时区、普通用户与 sudoers 校验、Docker 与国内镜像源、安全加固；支持 --check 预演与 --tags 分段执行
   \item 安全加固：nftables 规则模板化下发并做语法校验（不影响 Docker / K8s 既有规则链）；禁用 root SSH 登录；清理云厂商预装 agent
