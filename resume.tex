@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% resume version: v3.10（网络工程师方向）
+% resume version: v3.8（系统方向运维版）
 % 版式仿「李典铮-运维工程师」：居中姓名 + 红色小节标题通栏横线 + 公司/职位/日期三行式
 % + 紧凑单行 bullet + 技能块「加粗组名 + 内容」双栏。单文件，不再 include sections/。
 
@@ -83,7 +83,7 @@
 % ================= 抬头 =================
 \begin{center}
   {\bfseries\fontsize{25}{28}\selectfont 朱宇杰}\\[3pt]
-  {\color{accent}\bfseries\fontsize{11}{13}\selectfont 运维工程师 / 网络工程师 \quad·\quad Linux 系统与网络运维}\\[4pt]
+  {\color{accent}\bfseries\fontsize{11}{13}\selectfont 运维工程师 \quad·\quad Linux 系统 / 云主机与服务运维}\\[4pt]
   {\color{muted}\small 上海（现居）\quad·\quad (+86) 155-2385-6350\quad·\quad init233@outlook.com\quad·\quad github.com/libiunc}
 \end{center}
 \vspace{-1pt}
@@ -93,7 +93,7 @@
 % ================= 核心能力 =================
 \cvsection{核心能力}
 \skillrow{系统 / 虚拟化}{主流 Linux 发行版与 Windows Server；KVM 虚拟化（Proxmox VE）、VMware ESXi；OpenStack 与 Kubernetes 集群部署与运维（kubeadm / Helm）；Docker / containerd}
-\skillrow{网络}{路由器 / 交换机 / 无线 AP 配置与日常运维；TCP/IP、VLAN 划分与隔离、DHCP / DNS、VPN、nftables 防火墙策略与策略路由、多网段与子网规划；tcpdump 抓包分析与连接异常定位、网络性能与质量优化、Cloudflare WAF 规则调优；HCIA-Datacom}
+\skillrow{网络}{TCP/IP、VLAN、DHCP / DNS、VPN、nftables 防火墙策略、多网段与子网规划、tcpdump 抓包与连接异常定位、Cloudflare WAF 规则调优；HCIA-Datacom}
 \skillrow{云 / 自动化}{阿里云（ECS / VPC / vSwitch / 安全组 / 对象存储 / RAM 用户·角色·策略与最小权限）与 AWS（EC2 / Lightsail 实例、S3 对象存储、静态 IP 与 IPv6、实例快照 / IAM 权限收敛）日常运维；Cloudflare DNS 与 WAF 规则 API 自动化；Ansible（playbook / role 幂等批量、inventory 分组）、Shell / Python 自动化脚本；CI/CD：Gitea + Jenkins 容器化部署，构建镜像并交付到 Kubernetes 集群}
 \skillrow{监控 / 备份}{Zabbix 监控体系（主机与模板、触发器与告警规则、告警通知）；自动定时备份 + 变更前自动快照 + 一键回滚 / 跨环境重建恢复}
 \skillrow{信创适配}{国产操作系统部署与兼容排查；A/B 双分区 + ostree 原子更新、Virtual A/B 快照回退}
@@ -103,9 +103,9 @@
 
 \jobentry{苏珊贝尔}{辽宁}{运维工程师}{2025.06 - 2026.07}
 \begin{bullets}
-  \item 负责路由器、交换机与无线 AP 的网络日常运维：VLAN 划分与隔离、VPN 接入、防火墙与多网段路由策略配置，以及链路维护、网络性能优化与现场 / 远程技术支持
+  \item 负责网络区域的网络运维与复杂网络策略配置：VLAN 划分与隔离、VPN 接入、防火墙策略与多网段路由规划
   \item 用 KVM（Proxmox VE）/ VMware 维护多台 Linux / Windows 虚拟机：模板与克隆、cloud-init + Ansible playbook 快速部署、快照回滚与集中管理，用于部署验证与故障复现
-  \item 网络故障排错与报告：用 tcpdump 抓包、curl / dig 连通性与解析验证逐层定位原因（含跨境访问与业务连接异常），输出故障处理记录与改进建议
+  \item 业务服务网络异常排查：组合使用 tcpdump 抓包、curl / dig 连通性与解析验证等手段，按网络 → 服务端逐层定位跨境访问与业务连接异常
   \item 编写 Shell / Python 脚本处理服务启动、健康检查、日志轮转与异常重启；Zabbix 主机与模板管理、触发器与告警规则配置
   \item 配置站点 WAF 防护（Cloudflare）：自定义拦截规则、SQL 注入与 XSS 规则集、CC 与频率限制、IP 封禁与地区限制
 \end{bullets}
